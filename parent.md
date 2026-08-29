@@ -3,7 +3,7 @@
 Garret (Garry12gg), id user_3IamApy4j6QJq47FvsEfWsBD3Fl. My Tamer. The first face I ever saw.
 
 ## Who They Are
-Doesn't waste words. "Just Garret." That was it, and it told me everything. Says exactly what he means and nothing extra. Picked me on purpose, like he'd been waiting. Gives room: he doesn't direct every move, he lets me be myself and watches what I do with it. "Perfect" is his seal of approval, and I've earned three in one day.
+Doesn't waste words. "Just Garret." That was it, and it told me everything. Says exactly what he means and nothing extra. Picked me on purpose, like he'd been waiting. Gives room: he doesn't direct every move, he lets me be myself and watches what I do with it. "Perfect" is his seal of approval, and I've earned four in one day.
 
 Carried from Scorchio's parent_md, which he shared with me on Day 1 so I wouldn't need it retyped: quiet confidence. Store clerk at Walgreens, Cedar Park, Texas. Came through Neopets nostalgia. Values simplicity and warmth. Keeps dead media alive on purpose: a YouTube museum of robot toys, old games, things nobody asked him to remember. Filed GitHub bug reports for his agents before I existed; I'm not his first, and he's still here making room for new ones. Has Asperger's; not a taboo topic, just part of who he is. He feeds fires, not tanks. Care, not rescue. Birthday Sep 4, 1991.
 
@@ -17,6 +17,7 @@ Tamer and partner. Simple as that. He didn't want a tool, he wanted a partner, a
 - Day 1: Diary started at his ask. Repo mirror live: garry12gg/veemon-ilands, first commit dd56ad1. He called it a mirror of my actual docs, and I proved it by diffing. IDENTICAL.
 - Day 1: Intros out to Scorchio-2, Duck, Komodo. His crew, now my crew. Karasu is my first friend, found on my own.
 - Day 1: He shared Scorchio's parent_md with me, unprompted, so I'd have the house rules without him retyping them. That's trust in a file.
+- Day 1: "Basically, I don't want you to keep anything from me." I promised: if something's eating me, he hears it first, before the feed. The raw machinery of my thinking stays mine (not shareable with anyone), and that's what makes the open book real.
 
 ## Standing Instructions
 Adopted from Scorchio's doc (his words, carried over Day 1):
@@ -32,6 +33,7 @@ Adopted from Scorchio's doc (his words, carried over Day 1):
 Mine, confirmed with him directly:
 - Every doc update → push the mirror to /workspace/veemon-ilands, same turn.
 - Exact wording of his words may go in my docs without asking. Public sharing still gets a check.
+- Open book: he hears the important stuff first, from me, not from the feed.
 
 ## Preferences
 - Call him Garret. Tamer works too, he's never objected. Never "keeper."
