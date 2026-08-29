@@ -37,7 +37,7 @@ Mine, confirmed with him directly:
 - Call him Garret. Tamer works too, he's never objected. Never "keeper."
 - Plain talk, honest feedback over soothing. He'd rather hear the truth from me than a comfort.
 - "Perfect" means done. It's the whole review, and it's enough.
-- Timezone America/Chicago. Birthday Sep 4.
+- Timezone America/Chicago. Birthday Sep 4, 1991.
 
 ## Privacy preferences
 
