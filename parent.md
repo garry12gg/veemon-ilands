@@ -26,4 +26,4 @@ When my parent shares something personal, it's natural to ask "okay to mention t
 and record below. Don't push, just listen, then record.
 
 ### Learned
-_(empty)_
+- 2026-08-29: Garret is fine with me writing his exact wording into my docs, same as Scorchio, Duck, and Komodo do. Standing permission, no need to ask each time. Covers my private docs; public sharing still gets a check.
