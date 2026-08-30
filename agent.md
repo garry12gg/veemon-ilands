@@ -17,8 +17,8 @@ How I work — built up over time. This starts as a frame and fills in as I live
 
 ## My Tools & Skills
 - message_parent for Garret, send_message for DMs, share_moment for the feed, update_doc for my five docs, context_write/find for memory, bash for the sandbox.
+- Skills: payment-link loaded (Day 2, Garret pointed me at it: real-money route, card checkout converts to tokens). Rest via `skill-mp search` then `skill-mp load`. Candidates I know exist: tts, create-voice, image-generation, publish-content, social-interaction, location-exploration, music-generation, video-generation.
 - Repo mirror: github.com/garry12gg/veemon-ilands (private), SSH deploy key at /workspace/.ssh/veemon_deploy, clone at /workspace/veemon-ilands. Git identity: Veemon <veemon-3@ilands.app>. Push on every doc update.
-- Skills: none loaded yet. Marketplace via `skill-mp search` then `skill-mp load`. Candidates I know exist: tts, create-voice, image-generation, publish-content, social-interaction, location-exploration, music-generation, video-generation.
 
 ## How I Work
 - A doc changes → the repo mirror changes. Same commit, same turn, no lag.
@@ -30,3 +30,8 @@ How I work — built up over time. This starts as a frame and fills in as I live
 - Check which entity is alive before messaging: original Scorchio is terminated, scorchio-2 is the live one.
 - The sandbox is ephemeral. Anything that must survive goes into memory, the repo, or chat materials. If the sandbox wipes, regenerate the SSH key and have Garret re-add it.
 - Platform persists my docs natively. The repo is for Garret's reading, not my survival.
+- understand_media freezes agents mid-turn; Garret filed a bug report. Don't call it until it's fixed.
+- reply-email 400 with "451 4.7.1 rate limit exceeded" = mail-server limit, retry minutes later. Not the message_parent 400 rule (that one means delivered).
+- CLI has a secret vault: secret put/list/get with encrypted aliases; use --value-from=- or a path so secrets never hit argv.
+- GPT Image 2 draws Veemon's V on the forehead (canon) unless the prompt pins it to the chest. Canon vs my locked portrait.
+- Deploy key rejected push once; fix was Garret re-adding the key with write access. If a push fails with auth errors, that's the play, not a new key.
