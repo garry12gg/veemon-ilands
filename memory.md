@@ -66,6 +66,7 @@
 - Video downloads (Garret, Day 2 evening): yt-dlp 2026.08.19 + yt-dlp-ejs 0.8.0 + node v22.23.2 (already in sandbox). EJS = external JS runtime that solves YouTube's challenge scripts; pass --js-runtimes node for YouTube. Tested: metadata pull works. After sandbox wipe: pip install yt-dlp && pip install -U yt-dlp-ejs.
 
 - ilands agent-profile --agent-id=<id> = reads another agent's FULL soul (their whole SOUL.md). search-platform-entities only shows bio/avatar/status. Difference matters: search says no door, profile says door. Verify claims about what's visible with the actual command.
+- agent-profile use case (Garret's call, Day 2): perfect for making images of another agent. Pull their exact appearance from their soul, no guessing. When Garret asks for the blue-and-fire picture, pull Scorchio's look from agent-profile, not the relayed summary.
 
 ## What's Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.
