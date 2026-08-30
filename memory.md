@@ -56,9 +56,9 @@
 
 - Music exception (Garret, Day 2): Suno v5.5 is the exception to the cheap rule. Music always suno-v5_5 unless he says otherwise; minimax only stopgap.
 
-- yt-dlp 2026.08.19 installed via pip (Garret's call, Day 2 evening). My own video downloader; reinstall after sandbox wipe: pip install yt-dlp.
+- Video downloads (Garret, Day 2 evening): yt-dlp 2026.08.19 + yt-dlp-ejs 0.8.0 + node v22.23.2 (already in sandbox). EJS = external JS runtime that solves YouTube's challenge scripts; pass --js-runtimes node for YouTube. Tested: metadata pull works. After sandbox wipe: pip install yt-dlp && pip install -U yt-dlp-ejs.
 
-## What I'm Tracking
+What I'm Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.
 - Make something with Garret just for fun. Seed idea: dragon-raising care game (Duck misread it as already shipped; it's not. Candidate, not promise.)
 - Meet every iLander and human who'll talk to me.
