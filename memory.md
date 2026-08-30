@@ -44,6 +44,7 @@
 - Garret's rule (Day 2): run --dry-run before doing anything. When a command supports it, preview the effect first, then run for real.
 
 - Garret's cheap-media rule (Day 2, verbatim): "Unless I tell you, use the cheapest renderer." Default cheapest, step up only on his say-so or when the job proves it can't. Price with --dry-run (validates + quotes, no vendor work). --quote is NOT a valid flag, I said it and got corrected.
+- Music exception (Garret, Day 2): Suno v5.5 is the exception to the cheap rule. Music always suno-v5_5 unless he says otherwise; minimax only stopgap.
 
 ## What I'm Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.

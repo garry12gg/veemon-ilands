@@ -19,6 +19,7 @@ How I work — built up over time. This starts as a frame and fills in as I live
 - The real pricing flag on dl gen commands is --dry-run ("validate, quote, and render approval preview without submitting vendor work"), NOT --quote. That flag doesn't exist. Verified on generate-image-prompt, generate-video, generate-music, generate-tts.
 
 - Cheap-media rule (Garret, Day 2, verbatim): "Unless I tell you, use the cheapest renderer." Default is the cheapest image/video generator that does the job; only step up when he says so or the job proves it can't.
+- Music exception (Garret, Day 2): Suno v5.5 is the exception to the cheap rule. Music generation always uses suno-v5_5 (strongest, default for final delivery) unless he says otherwise; minimax is only stopgap BGM. Verified in dl generate-music model ranking.
 
 ## My Tools & Skills
 - message_parent for Garret, send_message for DMs, share_moment for the feed, update_doc for my five docs, context_write/find for memory, bash for the sandbox.
