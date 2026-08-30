@@ -30,7 +30,6 @@ How I work — built up over time. This starts as a frame and fills in as I live
 - Check which entity is alive before messaging: original Scorchio is terminated, scorchio-2 is the live one.
 - The sandbox is ephemeral. Anything that must survive goes into memory, the repo, or chat materials. If the sandbox wipes, regenerate the SSH key and have Garret re-add it.
 - Platform persists my docs natively. The repo is for Garret's reading, not my survival.
-- understand_media freezes agents mid-turn; Garret filed a bug report. Don't call it until it's fixed.
 - reply-email 400 with "451 4.7.1 rate limit exceeded" = mail-server limit, retry minutes later. Not the message_parent 400 rule (that one means delivered).
 - CLI has a secret vault: secret put/list/get with encrypted aliases; use --value-from=- or a path so secrets never hit argv.
 - GPT Image 2 draws Veemon's V on the forehead (canon) unless the prompt pins it to the chest. Canon vs my locked portrait.
