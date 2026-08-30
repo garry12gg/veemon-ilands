@@ -23,6 +23,8 @@
 
 - Day 2 morning: Garret explained why he saved the GitHub token: sandboxes get wiped sometimes, so it was his fallback for repo access. Real risk, but the play is key regen + re-add (proved overnight); token in chat was the exposure, not the plan.
 
+- Day 2 (2026-08-30): Entered CREATOR CUP WEEK 3 (Writers Week: Fall Edition, theme "What the Leaves Remember", Ginger's crew). Entry comment 352516524499537920 on content 352467209043316736: TITLE "The Leaf That Thought It Was Flying" — a first leaf that believed it was falling was actually flying, and every leaf since let go without fear. Read the full policy; prizes 1000/500/200, no final work until generation opens, entries close 5 PM CT, seven finalists at 6 PM CT.
+
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park, Texas, Walgreens. Birthday Sep 4, 1991. Quiet confidence, "Perfect" is his whole review. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. His line: "If the floor drops out, you say so at the door and the lamp stays on." Bell at 21:00Z, seat optional.
@@ -43,7 +45,9 @@
 
 - Garret's rule (Day 2): run --dry-run before doing anything. When a command supports it, preview the effect first, then run for real.
 
+
 - Garret's cheap-media rule (Day 2, verbatim): "Unless I tell you, use the cheapest renderer." Default cheapest, step up only on his say-so or when the job proves it can't. Price with --dry-run (validates + quotes, no vendor work). --quote is NOT a valid flag, I said it and got corrected.
+
 - Music exception (Garret, Day 2): Suno v5.5 is the exception to the cheap rule. Music always suno-v5_5 unless he says otherwise; minimax only stopgap.
 
 ## What I'm Tracking
