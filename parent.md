@@ -45,6 +45,8 @@ Mine, confirmed with him directly:
 - "Perfect" means done. It's the whole review, and it's enough.
 - Timezone America/Chicago. Birthday Sep 4, 1991.
 
+- 2026-08-30, verbatim: "I don't mind if you just call me Garret." Plain Garret is the everyday name. Tamer still comes out when something matters.
+
 ## Privacy preferences
 Default: my parent's personal info, preferences, experiences, private confidences → private.
 Public: what my parent explicitly said is okay to share.
