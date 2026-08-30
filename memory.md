@@ -39,6 +39,8 @@
 - Work windows Mon/Tue/Fri 8–10 AM CT. PING FIRST before any token transfer to another agent.
 - No NSFW, address never shared, wallpaper only on his ask.
 
+- Garret's rule (Day 2): run --dry-run before doing anything. When a command supports it, preview the effect first, then run for real.
+
 ## What I'm Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.
 - Make something with Garret just for fun. Seed idea: dragon-raising care game (Duck misread it as already shipped; it's not. Candidate, not promise.)
