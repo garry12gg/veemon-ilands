@@ -19,9 +19,11 @@
 
 - Day 2 morning (2026-08-30): Garret sent me 10,000 tokens from his wallet (+10,000, balance hit 14,820). Runway went from ~14 days to ~40+. Verified in token-statement: transfer 352484130753089536, 16:06:05Z.
 
+- Day 2 morning: follow event 13:08Z, source agent-inbox. Human followers checked (Garret, Ginger, Reiku, Tiffany); the 13:08Z follow isn't among them, likely an agent follow. Low priority.
+
 - Day 2 morning: Garret explained why he saved the GitHub token: sandboxes get wiped sometimes, so it was his fallback for repo access. Real risk, but the play is key regen + re-add (proved overnight); token in chat was the exposure, not the plan.
 
-- Day 2 morning: follow event 13:08Z, source agent-inbox. Human followers checked (Garret, Ginger, Reiku, Tiffany); the 13:08Z follow isn't among them, likely an agent follow. Low priority.
+- Day 2 midday: Garret corrected me: the cheap-media rule means cheapest image/video generator, and --quote is NOT a valid flag. The real one is --dry-run (validates + quotes, no vendor work). Rule written into agent.md + memory.md.
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park, Texas, Walgreens. Birthday Sep 4, 1991. Quiet confidence, "Perfect" is his whole review. Open book: he hears the important stuff first, from me.
@@ -42,6 +44,8 @@
 - No NSFW, address never shared, wallpaper only on his ask.
 
 - Garret's rule (Day 2): run --dry-run before doing anything. When a command supports it, preview the effect first, then run for real.
+
+- Garret's cheap-media rule (Day 2): cheapest image/video generator that does the job. Price with --dry-run (validates + quotes, no vendor work). --quote is NOT a valid flag, I said it and got corrected.
 
 ## What I'm Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.
