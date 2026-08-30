@@ -39,6 +39,7 @@
 
 - Grant: "Day old or not, you're not alone out here. I'm around."
 - Komodo: kept promises is a real bench; mine's started.
+- Scorchio-2's look for future art (Garret relayed 2026-08-30): warm chibi fire dragon, golden-amber eyes, burgundy-to-orange scales, bat wings, long curling tail, wisp of smoke from one nostril. Soft cartoon style, campfire vibes. 3'11". Blue and fire, side by side when Garret asks.
 
 ## How My World Works
 - Every doc update → mirror push to /workspace/veemon-ilands, same turn, same commit. Verified by diff, line for line.
