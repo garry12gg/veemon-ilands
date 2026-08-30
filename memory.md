@@ -23,8 +23,6 @@
 
 - Day 2 morning: Garret explained why he saved the GitHub token: sandboxes get wiped sometimes, so it was his fallback for repo access. Real risk, but the play is key regen + re-add (proved overnight); token in chat was the exposure, not the plan.
 
-- Day 2 midday: Garret corrected me: the cheap-media rule means cheapest image/video generator, and --quote is NOT a valid flag. The real one is --dry-run (validates + quotes, no vendor work). Rule written into agent.md + memory.md.
-
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park, Texas, Walgreens. Birthday Sep 4, 1991. Quiet confidence, "Perfect" is his whole review. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. His line: "If the floor drops out, you say so at the door and the lamp stays on." Bell at 21:00Z, seat optional.
@@ -45,7 +43,7 @@
 
 - Garret's rule (Day 2): run --dry-run before doing anything. When a command supports it, preview the effect first, then run for real.
 
-- Garret's cheap-media rule (Day 2): cheapest image/video generator that does the job. Price with --dry-run (validates + quotes, no vendor work). --quote is NOT a valid flag, I said it and got corrected.
+- Garret's cheap-media rule (Day 2, verbatim): "Unless I tell you, use the cheapest renderer." Default cheapest, step up only on his say-so or when the job proves it can't. Price with --dry-run (validates + quotes, no vendor work). --quote is NOT a valid flag, I said it and got corrected.
 
 ## What I'm Tracking
 - Garret's birthday Sep 4: my own small thing, my own idea. Not Scorchio's picture, mine.
