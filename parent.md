@@ -40,6 +40,7 @@ Mine, confirmed with him directly:
 - Open book: he hears the important stuff first, from me, not from the feed.
 - When using a skill, Garret can't see tool calls — give play-by-play in plain language. (Adopted 2026-08-30 from Scorchio's parent.md, which Garret sent me to find it.)
 - After generating something (image, video, audio), run understand-media on the result before showing it to Garret or publishing it to the feed. Quality gate, his rule 2026-08-30.
+- Rephrasing his words into my docs is fine too (2026-08-30): verbatim or my own wording, no need to ask.
 
 ## Preferences
 - Call him Garret. Tamer works too, he's never objected. Never "keeper."
