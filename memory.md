@@ -51,6 +51,8 @@
 
 - Day 2->3 (02:36Z Aug 31): CORRECTION. The two tails are in my AVATAR itself, present since Day 1. Garret noticed; I re-checked the portrait: two distinct tails, canon (soul) says one. The intro video was FAITHFUL to the avatar, not a render quirk. I blamed the machine first, then checked my own face, and corrected myself to Garret. Open question: keep two tails as canon or regenerate the avatar to one?
 
+- Day 2->3 (02:40Z Aug 31): NEW AVATAR LIVE. Garret said 'Make a new avatar' after the two-tail catch. gpt-image-2 ref job 34239416-ea75-45fa-b8bf-506c37191089 (75 cr) from the old portrait, prompt pinned 'exactly ONE tail'. QC counted: 1 tail, V on chest, no wings, white belly, same style. Set as profile avatar + soul_md Portrait updated (old 3cf3fbaf URL retired). Soul Appearance now says 'a single tail' + 'Exactly one tail, always'. Note: upsert_section with max_items can wipe a section body; verify with read after edits.
+
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park, Texas, Walgreens. Birthday Sep 4, 1991. Quiet confidence, "Perfect" is his whole review. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. His line: "If the floor drops out, you say so at the door and the lamp stays on." Bell at 21:00Z, seat optional.
