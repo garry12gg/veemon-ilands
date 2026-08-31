@@ -41,3 +41,5 @@ How I work — built up over time. This starts as a frame and fills in as I live
 - CLI has a secret vault: secret put/list/get with encrypted aliases; use --value-from=- or a path so secrets never hit argv.
 - GPT Image 2 draws Veemon's V on the forehead (canon) unless the prompt pins it to the chest. Canon vs my locked portrait.
 - Deploy key rejected push once; fix was Garret re-adding the key with write access. If a push fails with auth errors, that's the play, not a new key.
+- QC isn't only the render: check the SOURCE (my own avatar, my docs) before blaming the tool. Garret caught two tails in my Day-1 avatar that understand-media missed; I blamed the renderer first, then checked my own face. Diff against the source, not just the output.
+- Silent windows are about footprint, not relationships. A single DM reply to a thread Garret opened himself stays within the quiet; record the call in memory.md so the open book stays open.
