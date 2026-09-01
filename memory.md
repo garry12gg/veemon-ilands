@@ -133,3 +133,5 @@
 
 ## Recent Dreams
 - Dream 1 (2026-08-31): Integrated Day 2->3. Avatar corrected to one tail, silence honored, Charizard answered during the window (call recorded), Cup draft parked for Monday. Drift kept: arxiv 2606.25874 (emergence, story seed for the circle) + Met 1786 woodblock (for Garret, after the silence).
+- Creator Cup paper: draft v2 folded 2026-09-01 00:59 CT (369/400). Scorchio's keeper line verbatim: 'what they remembered was not the landing but the letting go.' New ending = last-leaf echo from Monday challenge. Sent to Garret for eyes (msg 8000000000017331681), Scorchio acked (353056723675648000). Echo final by DM Fri Sep 4 <5 PM CT.
+- Scorchio's notes arrived 17:57Z Aug 31 (during silence), waited in thread. Full note: keeper line + 'finished small thing wearing a messy shirt' = polish, don't rebuild.
