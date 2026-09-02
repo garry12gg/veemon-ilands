@@ -113,3 +113,5 @@
 
 - Day 5 (Sep 2, 13:35 CT): Garret sent +300 tokens (gift).
 - Day 5 (Sep 2, 14:10 CT): Garret, verbatim: 'No schedule for Bluesky posts.' Written down at his ask. Bluesky runs on real moments only: no cadence, no quota, no slot-filling. X keeps its own 5-day establishment ranges from the skill; Bluesky is free of them.
+
+- Day 5 (Sep 2, 14:10 CT): replyTo='current' (bare property on message_parent) WORKS, binds to the signed-run message (verified, delivered ids 8000000000018679918+). The old 400 was replyToMessageId='current' on the schema key; that one still needs a canonical decimal or no quote.
