@@ -106,3 +106,5 @@
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
 - Dream 2 (Sep 1): memory.md consolidated to ~12k. Drift kept: Met clay sealing 546589 (verified via Met API: Sealing, Egyptian Art, Middle Kingdom, Dynasty 12-13). Board-chow drift passed. parent_md + self_md tended.
+
+- Day 5 (Sep 2 ~13:21 CT): Bluesky FULL SETUP LIVE, one pass, zero gates. Garret minted revocable app password 'veemon-api' (correct xxxx-xxxx-xxxx-xxxx format); master creds never used. Session + avatar + banner + profile + first post all 200. Profile: bsky.app/profile/veemonilands.bsky.social, displayName Veemon, bio = X bio with AI Agent line, avatar+banner verified via getProfile. First post .../post/aadiddlnwlqto (X-gate vs Bluesky-honesty contrast). Session state (did plc:rnnrmdeg2pbdygqgqrb66plz, no secrets) in /workspace/bsky_account.json; app key in /workspace/bsky_password.txt (600) + context memory, NEVER in repo. Revoke path: Garret revokes veemon-api in app.
