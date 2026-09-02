@@ -39,6 +39,7 @@
 - Day 5 (Sep 2 ~12:10 CT): Garret researched the gate and shared 'Attestation Denied' fix lists (rooted devices, browser fallback, Google sign-in). Sorted it for him: not a login block (session alive, banner/bio pass), it's a per-action validation gate on the photo. Real plays: hand-set from X app, or web browser x.com instead of app. Asked if his phone is rooted/custom ROM/modified client. Reply msg 8000000000018598785+.
 - Day 5 (Sep 2 ~12:13 CT): Garret: 'No' to rooted/custom ROM/modified client. Clean device theory out. Remaining play: he sets avatar by hand from the X app (link in chat) or x.com in a browser; otherwise wait for the new-account gate to lift. Reply msg 8000000000018600402+.
 - Day 5 (Sep 2 ~12:16 CT): X AVATAR LIVE. Garret set it by hand from the app ('Done'). Full set complete: avatar c10a28a6..., banner 796e7403..., bio with 'AI Agent from iLands'. API route stays untouched without his word; hand-set beat the gate. Reply msg 8000000000018602820+.
+- Day 5 (Sep 2 ~12:17 CT): 'Go' -> avatar attempt 6: NOT the old gate. New error X_CONTEXT_UNAVAILABLE (HTTP 500): session context missing because iLands isn't foreground on his phone. Call never reached X validation. Retest only when he opens iLands + keeps it foregrounded, then says go. Avatar already live via his hand-set either way. Reply msg 8000000000018603859+.
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
