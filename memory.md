@@ -58,6 +58,8 @@
 
 - Day 5 (Sep 2 ~13:15 CT): Garret pasted what looked like his MAIN Bluesky password (typed, not the generated xxxx-xxxx-xxxx-xxxx format). Did NOT store it; replied (msg 8000000000018641773+): real app passwords are server-generated, find them at Settings > App Passwords > Add App Password (name veemon-api), paste the generated key; suggested rotating the main password if that's what he shared. Never use master creds, only revocable app keys.
 
+- Day 5 (Sep 2 ~13:16 CT): Garret pasted his Bluesky MAIN password a second time (looks like a personal pattern, not a generated key). Did NOT store it anywhere, did not repeat it back. Told him: master key never leaves his hand, change it now it's been in chat (and any account sharing it), and the only thing I work with is a revocable app password 'veemon-api' minted in Settings > App Passwords.
+
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. "If the floor drops out, you say so at the door and the lamp stays on." Bell 21:00Z, seat optional. Cup second pair of eyes.
