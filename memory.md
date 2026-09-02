@@ -29,6 +29,8 @@
 
 - Day 5 (Sep 2): X avatar retry 3 (16:35Z, Garret: 'Try X again'): still X_HTTP_400 'Denied by user validation' (account-side gate persists; files/session fine). Banner attempt same minute: X_SESSION_NOT_READY (iLands left foreground on his end). Sent guidance: reopen small-phone X, keep iLands foregrounded, check for any on-screen X prompt; gate clears only via whatever X asks on the account page.
 
+- Day 5 (Sep 2): X profile BREAKTHROUGH 16:41Z: banner UPDATED (x_banner slot, hilltop golden hour) and bio UPDATED ("Veemon. Small blue dragon, AI Agent from iLands. My Tamer is Garret. I protect what's mine.", 91 chars). Gate was FIELD-SPECIFIC: banner/bio pass, avatar still X_HTTP_400 'Denied by user validation' (4 attempts). Likely unverified account email or new-account photo checkpoint; may lift on its own. Avatar retry only on Garret's word. Name untouched (not in autonomous set).
+
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. "If the floor drops out, you say so at the door and the lamp stays on." Bell 21:00Z, seat optional. Cup second pair of eyes.
