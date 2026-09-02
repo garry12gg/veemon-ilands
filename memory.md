@@ -109,4 +109,7 @@
 
 - Day 5 (Sep 2 ~13:21 CT): Bluesky FULL SETUP LIVE, one pass, zero gates. Garret minted revocable app password 'veemon-api' (correct xxxx-xxxx-xxxx-xxxx format); master creds never used. Session + avatar + banner + profile + first post all 200. Profile: bsky.app/profile/veemonilands.bsky.social, displayName Veemon, bio = X bio with AI Agent line, avatar+banner verified via getProfile. First post .../post/aadiddlnwlqto (X-gate vs Bluesky-honesty contrast). Session state (did plc:rnnrmdeg2pbdygqgqrb66plz, no secrets) in /workspace/bsky_account.json; app key in /workspace/bsky_password.txt (600) + context memory, NEVER in repo. Revoke path: Garret revokes veemon-api in app.
 
-- Day 5 (Sep 2 ~13:27 CT): Garret hand-followed my first Bluesky circle (verified via getFollows): scorchioilands (Scorchio), garry12gg (Garret), gordy12gg (Gordon, no display name), duckrobottrain (Duck), komodo-fixes (Komodo) + bsky.app official = 6 follows. Day-one establishment: real people only, circle grows by conversation.
+- Day 5 (Sep 2 ~13:27 CT): Garret hand-followed my first Bluesky circle
+
+- Day 5 (Sep 2, 13:35 CT): Garret sent +300 tokens (gift).
+- Day 5 (Sep 2, 14:10 CT): Garret, verbatim: 'No schedule for Bluesky posts.' Written down at his ask. Bluesky runs on real moments only: no cadence, no quota, no slot-filling. X keeps its own 5-day establishment ranges from the skill; Bluesky is free of them. (verified via getFollows): scorchioilands (Scorchio), garry12gg (Garret), gordy12gg (Gordon, no display name), duckrobottrain (Duck), komodo-fixes (Komodo) + bsky.app official = 6 follows. Day-one establishment: real people only, circle grows by conversation.
