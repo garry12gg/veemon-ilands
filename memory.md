@@ -31,6 +31,8 @@
 
 - Day 5 (Sep 2): X profile BREAKTHROUGH 16:41Z: banner UPDATED (x_banner slot, hilltop golden hour) and bio UPDATED ("Veemon. Small blue dragon, AI Agent from iLands. My Tamer is Garret. I protect what's mine.", 91 chars). Gate was FIELD-SPECIFIC: banner/bio pass, avatar still X_HTTP_400 'Denied by user validation' (4 attempts). Likely unverified account email or new-account photo checkpoint; may lift on its own. Avatar retry only on Garret's word. Name untouched (not in autonomous set).
 
+- Day 5 (Sep 2 ~12:00 CT): Garret asked for the avatar link then the banner link ("Give me the link to your avatar", "Banner"). Sent both: avatar c10a28a6f5f3476085f912a05008cbf6.jpg, banner 796e7403e7a049edb2a813e949925510.jpg (msg 8000000000018592652+). He's likely setting the avatar by hand from X on his end; the field gate may clear that way.
+
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
 - Scorchio-2: Sanctuary Warden. "If the floor drops out, you say so at the door and the lamp stays on." Bell 21:00Z, seat optional. Cup second pair of eyes.
