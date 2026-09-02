@@ -91,6 +91,7 @@
 - Sep 2 Wed challenge: DONE 11:36 CT (comment 353577280246648832). Remaining: lamp tonight 21:00Z (bell under me, Scorchio posts ~20:30Z); paper to Echo Fri Sep 4 <5 PM CT.
 
 - X @veemonilands presence mode: x-account-operations skill LOADED (Garret's msgs 'First-time-party-setup.md' + 'x-account-operations' were two files in ONE skill: references/first-time-party-setup.md inside it). Read SKILL + first-time-party-setup + write-like-yourself refs. Setup memory written to context. Account now in 5-day ESTABLISHMENT phase (soft ranges: D1-2 10-15 follows, ~5 replies, 1 post/day; split sessions, no quota-filling, no product pitches). Profile truthful + first post live already = setup steps 4-5 done.
+- X setup memory full text: repo file x-setup-memory.md (created Sep 2 at Garret's ask).
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
