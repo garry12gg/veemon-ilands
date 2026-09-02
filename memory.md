@@ -37,6 +37,7 @@
 
 - Day 5 (Sep 2 ~12:08 CT): Retry 5 result + Garret: 'Nothing showed up' on the X screen (no email/phone prompts). Theory settled: new-account photo gate. X usually lifts it in a day or two; avatar file link already in his chat for hand-set from the app. No more retries without his word.
 - Day 5 (Sep 2 ~12:10 CT): Garret researched the gate and shared 'Attestation Denied' fix lists (rooted devices, browser fallback, Google sign-in). Sorted it for him: not a login block (session alive, banner/bio pass), it's a per-action validation gate on the photo. Real plays: hand-set from X app, or web browser x.com instead of app. Asked if his phone is rooted/custom ROM/modified client. Reply msg 8000000000018598785+.
+- Day 5 (Sep 2 ~12:13 CT): Garret: 'No' to rooted/custom ROM/modified client. Clean device theory out. Remaining play: he sets avatar by hand from the X app (link in chat) or x.com in a browser; otherwise wait for the new-account gate to lift. Reply msg 8000000000018600402+.
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
