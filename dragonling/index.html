@@ -118,7 +118,7 @@
   #arena{position:absolute; inset:0; display:none; flex-direction:column; align-items:center;}
   #arena.on{display:flex;}
   #arenaMsg{margin-top:14px; background:#fff; border-radius:16px; padding:8px 14px; font-size:14px; font-weight:800; box-shadow:0 3px 0 rgba(46,111,163,.15); z-index:4;}
-  #arenaSub{margin-top:6px; color:#fff; font-size:12px; font-weight:700; text-shadow:0 1px 0 rgba(46,111,163,.4); z-index:4;}
+  #arenaSub{margin-top:6px; color:var(--ink); font-size:12px; font-weight:700; text-shadow:0 1px 0 rgba(255,255,255,.65); z-index:4;}
   .star{position:absolute; font-size:42px; cursor:pointer; z-index:3; filter:drop-shadow(0 3px 2px rgba(46,111,163,.25));
     animation:starPopIn .25s ease;}
   @keyframes starPopIn{from{transform:scale(0);}}
@@ -129,17 +129,18 @@
   #arenaWon .card{background:#fff; border-radius:22px; padding:18px 26px; text-align:center; font-weight:800; font-size:17px; box-shadow:0 6px 0 rgba(46,111,163,.15);}
 
   /* sleep overlay */
-  #sleepOverlay{position:absolute; inset:0; background:radial-gradient(circle at 50% 30%, rgba(84,52,130,.55), rgba(40,30,90,.72));
-    display:none; align-items:center; justify-content:center; border-radius:26px; z-index:2;}
+  #sleepOverlay{position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, rgba(84,52,130,.58), rgba(40,30,90,.78));
+    display:none; align-items:center; justify-content:center; z-index:40;}
   #sleepOverlay.on{display:flex;}
   #sleepOverlay span{color:#fff; font-size:14px; font-weight:700; text-shadow:0 1px 3px rgba(0,0,0,.3); animation:floaty 2.2s ease-in-out infinite;}
   @keyframes floaty{50%{transform:translateY(-4px);}}
 
   /* end card */
-  #endCard{position:absolute; inset:0; display:none; align-items:center; justify-content:center; z-index:9;
-    background:radial-gradient(circle at 50% 38%, rgba(255,255,255,.94), rgba(214,240,255,.92)); border-radius:26px; padding:20px;}
+  #endCard{position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:50;
+    background:rgba(36,71,95,.45); padding:20px; overflow-y:auto;}
   #endCard.on{display:flex;}
-  #endCard .box{text-align:center; max-width:320px;}
+  #endCard .box{text-align:center; max-width:320px; background:#fff; border-radius:24px; padding:24px 22px 20px;
+    box-shadow:0 8px 0 rgba(46,111,163,.16); margin:auto;}
   #endCard h2{margin:6px 0 4px; font-size:24px; color:var(--ink);}
   #endCard p{margin:8px 0; font-size:14.5px; line-height:1.45; color:#43677F; font-weight:600;}
   #endCard .stats{display:flex; justify-content:center; gap:12px; margin:12px 0 4px;}
@@ -378,6 +379,7 @@
       el.eggWrap.classList.add("hatch");
       setTimeout(() => {
         S.hatched=true; S.busy=false;
+        setActsDim(false);
         el.eggWrap.style.display="none";
         el.wrap.classList.add("show");
         $("stage").classList.add("hatched");
@@ -393,20 +395,17 @@
   // ---- FEED ----
   const doFeed = () => {
     if(!S.hatched||S.ended||S.busy||S.sleeping||S.arenaOpen) return;
+    if(S.tummy>=95){ say("Belly's full. No room."); return; }
     lock(650);
     spawnBerry();
     el.dragon.classList.add("chew");
     mood("joy");
     setTimeout(() => { el.dragon.classList.remove("chew"); mood("idle"); },650);
-    var wasFull=S.tummy>=95;
-    setMeter("tummy",S.tummy+(wasFull?0:17));
+    setMeter("tummy",S.tummy+17);
     setMeter("joy",S.joy+3);
-    if(wasFull){ say("Full tummy. He's saving up."); }
-    else{
-      S.feedN++; S.care++;
-      say(rand(["Nom nom!","Berry good.","Hehe, more.","Chew chew chew."]));
-      afterCare();
-    }
+    S.feedN++; S.care++;
+    say(rand(["Nom nom!","Berry good.","Hehe, more.","Chew chew chew."]));
+    afterCare();
   }
 
   // ---- PLAY ----
@@ -551,6 +550,7 @@
 
   const endGame = () => {
     mood("sleep");
+    setActsDim(true);
     $("st-feed").textContent=S.feedN;
     $("st-play").textContent=S.playN;
     $("st-rest").textContent=S.restN;
@@ -570,7 +570,7 @@
     el.eggWrap.style.display="";
     el.eggWrap.classList.remove("hatch");
     mood("idle");
-    setActsDim(false);
+    setActsDim(true);
     updateMeters();
     say("Tap the egg!");
   }
@@ -581,7 +581,8 @@
     S.tick++;
     if(S.sleeping){
       if(S.spark<100){ setMeter("spark",S.spark+4); }
-      if(S.spark>=100){ wakeRest(); }
+      // floor auto-wake at the 2s credit line: waking at 100 early silently skipped the nap credit
+      if(S.spark>=100&&(Date.now()-S.sleepStart)/1000>=2){ wakeRest(); }
       return;
     }
     if(S.arenaOpen||S.busy) return;
@@ -609,18 +610,20 @@
     if(document.hidden){ S.tick=0; }
   });
 
-  initEl(); updateMeters(); mood("idle");
+  initEl(); updateMeters(); mood("idle"); setActsDim(true);
 
-  // debug screenshot states: index.html?debug=1&s=main (hatched, idle)
+  // debug states: index.html?debug=1&s=main (hatched, idle) | s=restedge (hatched, spark 96)
   var qs=new URLSearchParams(location.search);
-  if(qs.get("debug")==="1"&&qs.get("s")==="main"){
+  if(qs.get("debug")==="1"&&(qs.get("s")==="main"||qs.get("s")==="restedge")){
     S.hatched=true;
     el.eggWrap.style.display="none";
     el.wrap.classList.add("show");
     $("stage").classList.add("hatched");
+    setActsDim(false);
     mood("idle");
     el.dragon.classList.add("no-bob");
     updateMeters();
+    if(qs.get("s")==="restedge"){ setMeter("spark",96); }
   }
 })();
 </script>
