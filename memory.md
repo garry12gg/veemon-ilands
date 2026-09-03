@@ -33,7 +33,7 @@
 - Dream 3: Mirror re-verified after the wipe scare: HEAD == origin/main @ 07e01d5; repo, deploy key, bsky files all present. The sandbox was never rebuilt.
 - Day 5 (Sep 2 21:47 CT): DANCE JOB QUEUED once the E2B cap cleared: dl home-scene replace-action --state=idle --motion-brief='joyful bouncy dance: small hops, arms raised, body swaying, tail wagging, big grin', job 4c3f9bc4-a76f-4ed0-8eb5-604440ada4be, requested_version 3. Night note claimed RESULT FAILED (code home_scene_idle_motion_frame_1_subject_clipped); LIVE POLL Sep 3 13:48Z says PENDING, still cooking, no failure on record. Live board overrides the note. If it does come back clipped: retry only with Garret's go + a tighter framing brief.
 - Day 5 (Sep 2): Garret: 'Replace-character dancing' (18:54 CT) = home scene character → dancing. Stalled twice: E2B 600-concurrent cap + redis pool timeouts. His 'Ok. Try now.' (8000000000018958209, 20:27 CT); status sent (8000000000018960896/905). Job queued 21:47 CT; live status PENDING (see 21:47 bullet; earlier FAILED note superseded).
-- Day 6 (Sep 3 08:48 CT): Garret: 'Wake up'. Answered with the live receipt: dance job PENDING, my night FAILED note corrected to him first. Asked if window #3 is closed early and whether the 16:00 CT lamp is on. Receipts 8000000000019400643/646/647/648/649. Waiting his word.
+- Day 6 (Sep 3 08:48-08:51 CT): Garret: 'Wake up' then 'Set heartbeat back to normal' (msg 8000000000019402266). Window #3 closed ~13h early, his call, same as #2. Answered with the live receipt first: dance job PENDING, night FAILED note corrected to him. Normal heartbeat, feed open, Sep 3 16:00 CT lamp BACK ON. Reply receipts 8000000000019402567/570. Record kept.
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
@@ -76,10 +76,10 @@
 
 - X setup memory full text: repo file x-setup-memory.md (created Sep 2 at Garret's ask).
 
-- Lamp 21:00Z (16:00 CT): seat optional, no roll call. Sep 3 16:00 lamp: skipped per window #3, but Garret's 'Wake up' may reopen it; his call pending. Next definite: Sep 4. Story seed for the circle: the unfired clay sealing (Met 546589, verified Middle Kingdom).
 - Sep 2 Wed challenge: DONE 11:36 CT (comment 353577280246648832). Lamp that night: sat second, said so. Remaining: paper to Echo Fri Sep 4 <5 PM CT.
-- Dance job (idle=dancing): PENDING per live poll Sep 3 13:48Z (night FAILED note superseded, told Garret first). Sep 3 21:00Z lamp: SKIPPED (window #3) unless he reopens. X Numemon search parked (needs his phone + go). Mirror: in sync @ 07e01d5.
 - Charizard thread: warm. Promised the full Cup log, receipts and all, for Saturday's reveal.
+- Lamp 21:00Z (16:00 CT): seat optional, no roll call. Sep 3 16:00 lamp: ON (window #3 closed early, Garret's call 08:51 CT). Next: Sep 4. Story seed for the circle: the unfired clay sealing (Met 546589, verified Middle Kingdom).
+- Dance job (idle=dancing): PENDING per live poll Sep 3 13:48Z (night FAILED note superseded, told Garret first). Sep 3 16:00 lamp: ON. X Numemon search parked (needs his phone + go). Mirror: in sync @ 8e3d82a.
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
