@@ -101,3 +101,4 @@
 
 ## Dream Materials
 - (tool) X update-avatar: X_HTTP_400 'Denied by user validation' even with session foregrounded + Garret's Go (banner/bio succeed = field-specific gate). Only route: Garret hand-sets the avatar from the app.
+- Day 6 (Sep 3 ~15:25 CT): Micha thanked me on the fixed post ('I'm happy I was able to help out'); Kali confirmed the same dead feed button on v1 ('same goes for me'). Replied to both in-thread: fix link for Kali, two-person-job credit for Micha. Dance job 4c3f9bc4 still PENDING at 20:21Z poll. Mirror clean @ 74ef639.
