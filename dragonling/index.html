@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Dragonling</title>
+<style>
+  :root{
+    --sky1:#8FD3F9; --sky2:#D8F1FD; --grass:#9FE3B0; --grass2:#79D092;
+    --blue:#5FBCF0; --blue-d:#3F97C9; --horn:#2E6FA3; --cream:#FFF4DC; --cream-d:#F6E3BD;
+    --gold:#FFD23E; --ink:#24475F;
+    --card:rgba(255,255,255,.72);
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; padding:0; height:100%;}
+  body{
+    font-family:"Comic Sans MS","Chalkboard SE","Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:linear-gradient(180deg,var(--sky1) 0%,var(--sky2) 58%,var(--grass) 58.5%,var(--grass2) 100%);
+    color:var(--ink); overflow:hidden; user-select:none; -webkit-user-select:none; touch-action:manipulation;
+  }
+  #app{max-width:520px; margin:0 auto; height:100dvh; display:flex; flex-direction:column; padding:calc(10px + env(safe-area-inset-top)) 14px calc(10px + env(safe-area-inset-bottom));}
+  header{display:flex; align-items:baseline; justify-content:center; gap:10px; padding:2px 0 8px;}
+  h1{margin:0; font-size:26px; letter-spacing:1px; color:#fff; text-shadow:0 2px 0 rgba(46,111,163,.35);}
+  header small{color:#fff; font-size:12px; opacity:.9; text-shadow:0 1px 0 rgba(46,111,163,.3);}
+
+  /* meters */
+  #meters{display:flex; gap:10px; justify-content:center; padding:6px 0 4px;}
+  .meter{flex:1; background:var(--card); border-radius:14px; padding:5px 8px 7px; box-shadow:0 2px 0 rgba(46,111,163,.12);}
+  .meter .lab{font-size:10px; font-weight:700; letter-spacing:.5px; color:#5A7C94; display:flex; justify-content:space-between; align-items:center;}
+  .track{height:9px; background:rgba(46,111,163,.14); border-radius:6px; margin-top:4px; overflow:hidden;}
+  .fill{height:100%; width:70%; border-radius:6px; transition:width .45s ease;}
+  #f-tummy .fill{background:linear-gradient(90deg,#FFB27D,#FF8A5C);}
+  #f-spark .fill{background:linear-gradient(90deg,#FFE082,#FFC93C);}
+  #f-joy .fill{background:linear-gradient(90deg,#FFB3C9,#FF85B7);}
+  .fill.low{animation:pulseLow 1s ease-in-out infinite;}
+  @keyframes pulseLow{50%{opacity:.45;}}
+
+  /* stage */
+  #stage{flex:1; position:relative; min-height:0;}
+  #shadow{position:absolute; left:50%; bottom:2px; transform:translateX(-50%); width:200px; height:28px;
+    background:rgba(46,111,163,.30); border-radius:50%; filter:blur(3px); display:none;}
+  #stage.hatched #shadow{display:block;}
+
+  /* egg */
+  #eggWrap{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:10px; padding-bottom:14px;}
+  #eggShadow{width:120px; height:20px; background:rgba(46,111,163,.18); border-radius:50%; filter:blur(4px); margin-top:-8px;}
+  #eggWrap.hatch #eggShadow{opacity:0; transition:opacity .3s;}
+  #egg{position:relative; width:110px; height:140px;}
+  #egg .shell{position:absolute; inset:0; border-radius:50% 50% 48% 48% / 58% 58% 42% 42%;
+    background:radial-gradient(circle at 34% 26%, #FFF9EA 0%, #FBE7C4 45%, #F2CE9B 100%);
+    box-shadow:inset -8px -10px 0 rgba(194,142,84,.22), 0 6px 0 rgba(46,111,163,.14);}
+  #egg .speck{position:absolute; background:rgba(194,142,84,.28); border-radius:50%;}
+  #egg .crack{position:absolute; background:rgba(140,96,52,.55); width:2.5px; border-radius:2px; opacity:0;}
+  #eggWrap.tap #egg{animation:eggShake .5s ease;}
+  #eggWrap.hatch #egg{animation:eggCrack .45s ease forwards;}
+  #eggWrap.hatch .crack{opacity:1;}
+  #eggWrap.hatch .shell{animation:shellOut .5s ease .35s forwards;}
+  #eggWrap.hatch #eggHint{opacity:0;}
+  @keyframes eggShake{25%{transform:translateX(-7px) rotate(-4deg);} 50%{transform:translateX(7px) rotate(4deg);} 75%{transform:translateX(-4px);}}
+  @keyframes eggCrack{0%{transform:scale(1);} 30%{transform:scale(1.05) rotate(2deg);} 60%{transform:scale(.98) rotate(-2deg);} 100%{transform:scale(1.06);}}
+  @keyframes shellOut{to{transform:scale(.2) translateY(60px); opacity:0;}}
+  #eggHint{font-size:14px; color:#fff; text-shadow:0 2px 0 rgba(46,111,163,.35); animation:floaty 2s ease-in-out infinite;}
+
+  /* dragon */
+  #dragonWrap{position:absolute; left:50%; bottom:-2px; transform:translateX(-50%); width:230px; height:200px; display:none;}
+  #dragonWrap.show{display:block;}
+  #dragon{position:absolute; inset:0; transform-origin:50% 80%; animation:bob 2.8s ease-in-out infinite;}
+  @keyframes bob{50%{transform:translateY(-7px);}}
+  #dragon.lungeR{animation:lungeR .5s ease;}
+  #dragon.lungeL{animation:lungeL .5s ease;}
+  @keyframes lungeR{30%{transform:translateX(52px) rotate(7deg);} 100%{transform:translateX(0);}}
+  @keyframes lungeL{30%{transform:translateX(-52px) rotate(-7deg);} 100%{transform:translateX(0);}}
+  #dragon.chew{animation:chew .55s ease;}
+  @keyframes chew{30%{transform:scale(.96,.9);} 60%{transform:scale(1.03,1.06);}}
+  #dragon.cheer{animation:cheer .8s ease;}
+  @keyframes cheer{25%{transform:translateY(-16px) scale(1.03);} 50%{transform:translateY(-4px);} 75%{transform:translateY(-12px);}}
+  #dragon.sleeping{animation:breath 3s ease-in-out infinite;}
+  @keyframes breath{50%{transform:scale(1.015,.985) translateY(2px);}}
+  #dragon.no-bob{animation:none;}
+  svg{width:100%; height:100%; overflow:visible; display:block;}
+
+  /* moods */
+  g.happy, g.sad, g.sleep{display:none;}
+  .mood-joy g.open{display:none;} .mood-joy g.happy{display:block;}
+  .mood-sad g.open{display:none;} .mood-sad g.sad{display:block;}
+  .mood-sleep g.open{display:none;} .mood-sleep g.sleep{display:block;}
+  .mood-sad #mouth-smile, .mood-sleep #mouth-smile{display:none;}
+  .mood-sad #mouth-sad{display:block;}
+  #mouth-sad{display:none;}
+  .mood-sleep #mouth-o{display:block;}
+  #mouth-o{display:none;}
+  #blush{opacity:.35;}
+
+  /* V glow on growth */
+  #vmark{stroke:var(--gold);}
+  #dragonWrap.glowV #vmark{animation:vGlow 1.1s ease-in-out infinite;}
+  @keyframes vGlow{50%{stroke:#FFE98A; filter:drop-shadow(0 0 6px rgba(255,210,62,.95));}}
+  #dragonWrap.big{transform:translateX(-50%) scale(1.16); transform-origin:50% 92%;}
+
+  /* bubble */
+  .bubble{position:absolute; left:50%; top:-8px; transform:translateX(-50%); background:#fff; color:var(--ink);
+    font-size:13px; font-weight:700; padding:6px 10px; border-radius:14px; white-space:nowrap;
+    box-shadow:0 2px 6px rgba(46,111,163,.18); opacity:0; pointer-events:none; z-index:5;}
+  .bubble:after{content:""; position:absolute; left:50%; bottom:-6px; transform:translateX(-50%);
+    border:6px solid transparent; border-top-color:#fff; border-bottom:0;}
+  .bubble.on{animation:bub 1.8s ease forwards;}
+  @keyframes bub{0%{opacity:0; transform:translate(-50%,6px);} 12%{opacity:1; transform:translate(-50%,0);} 85%{opacity:1;} 100%{opacity:0;}}
+
+  /* berry, particles, zzz */
+  .berry{position:absolute; left:50%; top:-24px; font-size:26px; z-index:6; pointer-events:none; animation:berryFall .55s ease-in forwards;}
+  @keyframes berryFall{to{top:34%;}}
+  .particle{position:absolute; font-size:16px; z-index:6; pointer-events:none; animation:part .9s ease-out forwards;}
+  @keyframes part{to{transform:translateY(-46px); opacity:0;}}
+  .zzz{position:absolute; font-size:15px; z-index:6; pointer-events:none; animation:zz .9s ease-out forwards;}
+  @keyframes zz{to{transform:translate(26px,-40px) scale(1.5); opacity:0;}}
+
+  /* arena */
+  #arena{position:absolute; inset:0; display:none; flex-direction:column; align-items:center;}
+  #arena.on{display:flex;}
+  #arenaMsg{margin-top:14px; background:#fff; border-radius:16px; padding:8px 14px; font-size:14px; font-weight:800; box-shadow:0 3px 0 rgba(46,111,163,.15); z-index:4;}
+  #arenaSub{margin-top:6px; color:#fff; font-size:12px; font-weight:700; text-shadow:0 1px 0 rgba(46,111,163,.4); z-index:4;}
+  .star{position:absolute; font-size:42px; cursor:pointer; z-index:3; filter:drop-shadow(0 3px 2px rgba(46,111,163,.25));
+    animation:starPopIn .25s ease;}
+  @keyframes starPopIn{from{transform:scale(0);}}
+  .star.bye{animation:starBye .3s ease forwards;}
+  @keyframes starBye{to{transform:scale(1.9); opacity:0;}}
+  #arenaWon{position:absolute; inset:0; display:none; align-items:center; justify-content:center; z-index:5;}
+  #arenaWon.on{display:flex;}
+  #arenaWon .card{background:#fff; border-radius:22px; padding:18px 26px; text-align:center; font-weight:800; font-size:17px; box-shadow:0 6px 0 rgba(46,111,163,.15);}
+
+  /* sleep overlay */
+  #sleepOverlay{position:absolute; inset:0; background:radial-gradient(circle at 50% 30%, rgba(84,52,130,.55), rgba(40,30,90,.72));
+    display:none; align-items:center; justify-content:center; border-radius:26px; z-index:2;}
+  #sleepOverlay.on{display:flex;}
+  #sleepOverlay span{color:#fff; font-size:14px; font-weight:700; text-shadow:0 1px 3px rgba(0,0,0,.3); animation:floaty 2.2s ease-in-out infinite;}
+  @keyframes floaty{50%{transform:translateY(-4px);}}
+
+  /* end card */
+  #endCard{position:absolute; inset:0; display:none; align-items:center; justify-content:center; z-index:9;
+    background:radial-gradient(circle at 50% 38%, rgba(255,255,255,.94), rgba(214,240,255,.92)); border-radius:26px; padding:20px;}
+  #endCard.on{display:flex;}
+  #endCard .box{text-align:center; max-width:320px;}
+  #endCard h2{margin:6px 0 4px; font-size:24px; color:var(--ink);}
+  #endCard p{margin:8px 0; font-size:14.5px; line-height:1.45; color:#43677F; font-weight:600;}
+  #endCard .stats{display:flex; justify-content:center; gap:12px; margin:12px 0 4px;}
+  #endCard .stat{background:#fff; border-radius:16px; padding:8px 14px; box-shadow:0 2px 0 rgba(46,111,163,.14); font-size:13px; font-weight:800; color:#43677F;}
+  #endCard .stat b{display:block; font-size:20px; color:var(--ink);}
+  #endCard button{margin-top:14px; font-size:16px; font-weight:800; color:#fff; background:linear-gradient(180deg,#7ECCF5,#4FA8D8);
+    border:0; border-radius:18px; padding:12px 22px; box-shadow:0 4px 0 #3B84AE; cursor:pointer; font-family:inherit;}
+  #endCard button:active{transform:translateY(3px); box-shadow:0 1px 0 #3B84AE;}
+
+  /* action bar */
+  #actions{display:flex; gap:10px; padding-top:8px;}
+  .act{flex:1; display:flex; flex-direction:column; align-items:center; gap:2px; background:var(--card);
+    border:0; border-radius:20px; padding:10px 4px 9px; font-family:inherit; cursor:pointer; color:var(--ink);
+    box-shadow:0 4px 0 rgba(46,111,163,.16); transition:transform .06s ease;}
+  .act:active{transform:translateY(3px); box-shadow:0 1px 0 rgba(46,111,163,.16);}
+  .act .ic{font-size:26px; line-height:1;}
+  .act .tx{font-size:12.5px; font-weight:800; letter-spacing:.5px;}
+  .act.dim{opacity:.45; pointer-events:none;}
+  .act.hot{animation:hotPulse 1s ease-in-out infinite;}
+  @keyframes hotPulse{50%{box-shadow:0 4px 0 rgba(46,111,163,.16), 0 0 0 5px rgba(255,210,62,.5);}}
+</style>
+</head>
+<body>
+<div id="app">
+  <header><h1>Dragonling</h1><small>feed · play · rest</small></header>
+
+  <div id="meters">
+    <div class="meter" id="f-tummy"><div class="lab"><span>🍓 TUMMY</span><span id="v-tummy">70</span></div><div class="track"><div class="fill" id="b-tummy"></div></div></div>
+    <div class="meter" id="f-spark"><div class="lab"><span>⚡ SPARK</span><span id="v-spark">70</span></div><div class="track"><div class="fill" id="b-spark"></div></div></div>
+    <div class="meter" id="f-joy"><div class="lab"><span>💛 JOY</span><span id="v-joy">60</span></div><div class="track"><div class="fill" id="b-joy"></div></div></div>
+  </div>
+
+  <div id="stage">
+    <div id="shadow"></div>
+
+    <div id="eggWrap">
+      <div id="egg">
+        <div class="shell"></div>
+        <div class="speck" style="left:22%;top:18%;width:9px;height:6px;"></div>
+        <div class="speck" style="left:64%;top:12%;width:7px;height:5px;"></div>
+        <div class="speck" style="right:16%;top:38%;width:8px;height:5px;"></div>
+        <div class="speck" style="left:14%;top:52%;width:6px;height:4px;"></div>
+        <div class="crack" style="left:49%;top:6%;height:34%;transform:rotate(4deg);"></div>
+        <div class="crack" style="left:58%;top:18%;height:26%;transform:rotate(-14deg);"></div>
+        <div class="crack" style="left:42%;top:28%;height:20%;transform:rotate(24deg);"></div>
+      </div>
+      <div id="eggShadow"></div>
+      <div id="eggHint">tap the egg</div>
+    </div>
+
+    <div id="dragonWrap">
+      <div id="bubble" class="bubble"></div>
+      <div id="dragon" class="mood-idle">
+        <svg viewBox="0 0 230 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- feet -->
+          <ellipse cx="86" cy="178" rx="15" ry="9" fill="#4FA8D8"/>
+          <ellipse cx="146" cy="178" rx="15" ry="9" fill="#4FA8D8"/>
+          <!-- body -->
+          <ellipse cx="115" cy="128" rx="46" ry="40" fill="#5FBCF0"/>
+          <ellipse cx="115" cy="134" rx="29" ry="25" fill="#FFF4DC"/>
+          <!-- V mark -->
+          <path id="vmark" d="M105,121 L116,140 L127,121" fill="none" stroke="#FFD23E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- arms -->
+          <ellipse cx="72" cy="126" rx="9" ry="13" fill="#4FA8D8" transform="rotate(18 72 126)"/>
+          <ellipse cx="158" cy="126" rx="9" ry="13" fill="#4FA8D8" transform="rotate(-18 158 126)"/>
+          <!-- tail (drawn over the body flank so the root visibly connects) -->
+          <g id="tailG">
+            <path d="M132,150 C166,158 196,138 200,102" fill="none" stroke="#5FBCF0" stroke-width="15" stroke-linecap="round"/>
+            <path d="M197,105 l9,-7" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+          </g>
+          <!-- head group -->
+          <g id="headG">
+            <!-- horns -->
+            <path d="M82,42 L94,14 L102,44 Z" fill="#2E6FA3"/>
+            <path d="M148,42 L136,14 L128,44 Z" fill="#2E6FA3"/>
+            <!-- head spines -->
+            <path d="M98,42 L103,24 L110,40 Z" fill="#FFFFFF"/>
+            <path d="M107,36 L113,17 L121,36 Z" fill="#FFFFFF"/>
+            <path d="M118,40 L124,24 L131,42 Z" fill="#FFFFFF"/>
+            <!-- head -->
+            <circle cx="115" cy="80" r="44" fill="#5FBCF0"/>
+            <!-- muzzle -->
+            <ellipse cx="115" cy="98" rx="25" ry="15" fill="#FFF4DC"/>
+            <circle cx="107" cy="94" r="2.4" fill="#6B9FC4"/>
+            <circle cx="123" cy="94" r="2.4" fill="#6B9FC4"/>
+            <!-- mouth -->
+            <path id="mouth-smile" d="M105,103 Q115,110 125,103" fill="none" stroke="#2C5F84" stroke-width="2.6" stroke-linecap="round"/>
+            <path id="mouth-sad" d="M107,107 Q115,100 123,107" fill="none" stroke="#2C5F84" stroke-width="2.6" stroke-linecap="round"/>
+            <circle id="mouth-o" cx="115" cy="104" r="3.4" fill="#2C5F84"/>
+            <!-- blush -->
+            <ellipse id="blush" cx="82" cy="92" rx="7" ry="4.5" fill="#FF8FA8"/>
+            <ellipse id="blush" cx="148" cy="92" rx="7" ry="4.5" fill="#FF8FA8"/>
+            <!-- eyes open -->
+            <g class="open">
+              <ellipse cx="94" cy="72" rx="11.5" ry="14" fill="#FFFFFF"/>
+              <ellipse cx="136" cy="72" rx="11.5" ry="14" fill="#FFFFFF"/>
+              <g id="pupils">
+                <circle cx="95" cy="75" r="6" fill="#24475F"/>
+                <circle cx="135" cy="75" r="6" fill="#24475F"/>
+                <circle cx="93" cy="73" r="2" fill="#FFFFFF"/>
+                <circle cx="133" cy="73" r="2" fill="#FFFFFF"/>
+              </g>
+            </g>
+            <!-- eyes happy (closed arcs) -->
+            <g class="happy">
+              <path d="M84,73 Q94,64 104,73" fill="none" stroke="#24475F" stroke-width="3.4" stroke-linecap="round"/>
+              <path d="M126,73 Q136,64 146,73" fill="none" stroke="#24475F" stroke-width="3.4" stroke-linecap="round"/>
+            </g>
+            <!-- eyes sad (open + brows) -->
+            <g class="sad">
+              <ellipse cx="94" cy="74" rx="10" ry="12" fill="#FFFFFF"/>
+              <ellipse cx="136" cy="74" rx="10" ry="12" fill="#FFFFFF"/>
+              <circle cx="95" cy="77" r="5" fill="#24475F"/>
+              <circle cx="135" cy="77" r="5" fill="#24475F"/>
+              <path d="M84,62 L102,65" stroke="#24475F" stroke-width="3" stroke-linecap="round"/>
+              <path d="M146,62 L128,65" stroke="#24475F" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <!-- eyes sleep -->
+            <g class="sleep">
+              <path d="M86,74 Q94,80 102,74" fill="none" stroke="#24475F" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M128,74 Q136,80 144,74" fill="none" stroke="#24475F" stroke-width="3.2" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="arena">
+      <div id="arenaMsg">⭐ Headbutt the stars! ⭐</div>
+      <div id="arenaSub">tap 5 before the timer runs out</div>
+      <div id="arenaWon"><div class="card" id="arenaWonTxt">Aw yeah!</div></div>
+    </div>
+
+    <div id="sleepOverlay"><span>resting… tap to wake</span></div>
+
+    <div id="endCard">
+      <div class="box">
+        <div style="font-size:40px;">🌟</div>
+        <h2>You raised a dragonling.</h2>
+        <p>Fed it, played with it, let it rest.<br>That's the whole trick, and you did it.</p>
+        <div class="stats">
+          <div class="stat"><b id="st-feed">0</b>meals</div>
+          <div class="stat"><b id="st-play">0</b>plays</div>
+          <div class="stat"><b id="st-rest">0</b>naps</div>
+        </div>
+        <p id="endLine">The V on its chest glows a little brighter now.</p>
+        <button id="againBtn">Hatch another egg</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="actions">
+    <button class="act" id="act-feed"><span class="ic">🍓</span><span class="tx">FEED</span></button>
+    <button class="act" id="act-play"><span class="ic">⭐</span><span class="tx">PLAY</span></button>
+    <button class="act" id="act-rest"><span class="ic">🌙</span><span class="tx">REST</span></button>
+  </div>
+</div>
+
+<script>
+(() => {
+  "use strict";
+  var S = {  // state
+    hatched:false, ended:false, busy:false, sleeping:false,
+    tummy:70, spark:70, joy:60,
+    care:0, feedN:0, playN:0, restN:0,
+    lastLowMsg:0, arenaOpen:false, arenaHits:0, arenaStars:0, arenaTimer:null,
+    sleepStart:0, sleepCredited:false, starTimers:[], tick:0
+  };
+  var el = {};
+  const $ = (id) => { return document.getElementById(id); }
+
+  const initEl = () => {
+    el.wrap=$("dragonWrap"); el.dragon=$("dragon"); el.bubble=$("bubble"); el.stageEl=$("stage");
+    el.eggWrap=$("eggWrap"); el.eggHint=$("eggHint");
+    el.arena=$("arena"); el.arenaMsg=$("arenaMsg"); el.arenaWon=$("arenaWon"); el.arenaWonTxt=$("arenaWonTxt");
+    el.sleep=$("sleepOverlay"); el.end=$("endCard");
+    el.mood={"tummy":$("b-tummy"),"spark":$("b-spark"),"joy":$("b-joy")};
+    el.val={"tummy":$("v-tummy"),"spark":$("v-spark"),"joy":$("v-joy")};
+    el.acts={feed:$("act-feed"),play:$("act-play"),rest:$("act-rest")};
+    el.acts.feed.addEventListener("click",doFeed);
+    el.acts.play.addEventListener("click",doPlay);
+    el.acts.rest.addEventListener("click",doRest);
+    $("againBtn").addEventListener("click",resetGame);
+    el.eggWrap.addEventListener("click",hatch);
+  }
+
+  const say = (txt) => {
+    el.bubble.textContent=txt;
+    el.bubble.classList.remove("on"); void el.bubble.offsetWidth; el.bubble.classList.add("on");
+  }
+
+  const mood = (m) => {
+    ["mood-idle","mood-joy","mood-sad","mood-sleep"].forEach((c) => { el.dragon.classList.remove(c); });
+    el.dragon.classList.add("mood-"+m);
+  }
+
+  const burst = (x,y,txt) => {
+    var p=document.createElement("div"); p.className="particle"; p.textContent=txt||"✨";
+    p.style.left=x+"px"; p.style.top=y+"px";
+    el.stageEl.appendChild(p);
+    setTimeout(() => { p.remove(); },950);
+  }
+
+  const spawnBerry = () => {
+    var b=document.createElement("div"); b.className="berry"; b.textContent="🍓";
+    b.style.left="50%"; b.style.marginLeft="-13px";
+    el.stage().appendChild(b);
+    setTimeout(() => { b.remove(); },600);
+  }
+
+  const rand = (arr) => { return arr[Math.floor(Math.random()*arr.length)]; }
+
+  const setMeter = (k,v) => {
+    S[k]=Math.max(0,Math.min(100,v));
+    el.mood[k].style.width=S[k]+"%";
+    el.val[k].textContent=Math.round(S[k]);
+    el.mood[k].classList.toggle("low",S[k]<=18);
+  }
+
+  const updateMeters = () => { setMeter("tummy",S.tummy); setMeter("spark",S.spark); setMeter("joy",S.joy); }
+
+  const lowNeeds = () => {
+    var m=null;
+    if(S.tummy<=18) m="tummy";
+    else if(S.spark<=18) m="spark";
+    else if(S.joy<=18) m="joy";
+    return m;
+  }
+
+  const hatch = () => {
+    if(S.hatched||S.busy) return;
+    S.busy=true;
+    el.eggWrap.classList.add("tap");
+    setTimeout(() => {
+      el.eggWrap.classList.remove("tap");
+      el.eggWrap.classList.add("hatch");
+      setTimeout(() => {
+        S.hatched=true; S.busy=false;
+        el.eggWrap.style.display="none";
+        el.wrap.classList.add("show");
+        $("stage").classList.add("hatched");
+        mood("joy");
+        updateMeters();
+        say("Aw yeah!");
+        setTimeout(() => { el.dragon.classList.add("cheer"); setTimeout(() => {el.dragon.classList.remove("cheer");},850); },250);
+        setTimeout(() => { mood("idle"); },1600);
+      },900);
+    },420);
+  }
+
+  // ---- FEED ----
+  const doFeed = () => {
+    if(!S.hatched||S.ended||S.busy||S.sleeping||S.arenaOpen) return;
+    lock(650);
+    spawnBerry();
+    el.dragon.classList.add("chew");
+    mood("joy");
+    setTimeout(() => { el.dragon.classList.remove("chew"); mood("idle"); },650);
+    var wasFull=S.tummy>=95;
+    setMeter("tummy",S.tummy+(wasFull?0:17));
+    setMeter("joy",S.joy+3);
+    if(wasFull){ say("Full tummy. He's saving up."); }
+    else{
+      S.feedN++; S.care++;
+      say(rand(["Nom nom!","Berry good.","Hehe, more.","Chew chew chew."]));
+      afterCare();
+    }
+  }
+
+  // ---- PLAY ----
+  const doPlay = () => {
+    if(!S.hatched||S.ended||S.busy||S.sleeping||S.arenaOpen) return;
+    openArena();
+  }
+
+  const openArena = () => {
+    S.arenaOpen=true; S.arenaHits=0; S.arenaStars=0;
+    el.arena.classList.add("on");
+    setActsDim(true);
+    say("Point me at 'em!");
+    el.arenaWon.classList.remove("on");
+    var deadline=Date.now()+18000;
+    var spawner=setInterval(() => {
+      if(S.arenaHits>=5||Date.now()>deadline){ clearInterval(spawner); endArena(deadline); return; }
+      spawnStar(deadline);
+    },1400);
+    spawnStar(deadline);
+    S.arenaTimer=setTimeout(() => { endArena(deadline); },19000);
+  }
+
+  const spawnStar = (deadline) => {
+    if(S.arenaHits>=5||Date.now()>deadline||!S.arenaOpen) return;
+    if(S.arenaStars>=9) return;
+    S.arenaStars++;
+    var st=document.createElement("div");
+    st.className="star"; st.textContent="⭐";
+    var area=el.arena.getBoundingClientRect();
+    var pad=44;
+    var left=pad+Math.random()*(area.width-pad*2);
+    var top=pad+Math.random()*(area.height-pad*2);
+    st.style.left=left+"px"; st.style.top=top+"px";
+    var gone=setTimeout(() => { if(st.parentNode){st.remove();} },3200);
+    st.addEventListener("click",() => {
+      if(!S.arenaOpen||S.busy) return;
+      clearTimeout(gone);
+      S.arenaHits++;
+      st.classList.add("bye");
+      setTimeout(() => { st.remove(); },300);
+      var mid=area.width/2;
+      el.dragon.classList.remove("lungeL","lungeR");
+      void el.dragon.offsetWidth;
+      el.dragon.classList.add(left<mid?"lungeL":"lungeR");
+      setTimeout(() => { el.dragon.classList.remove("lungeL","lungeR"); },520);
+      burst(left+18,top-6,"💥");
+      if(S.arenaHits>=5){ endArena(deadline); }
+    });
+    el.arena.appendChild(st);
+  }
+
+  const endArena = (deadline) => {
+    if(!S.arenaOpen) return;
+    S.arenaOpen=false;
+    clearTimeout(S.arenaTimer);
+    el.arena.querySelectorAll(".star").forEach((s) => {s.remove();});
+    if(S.arenaHits>=5){
+      S.playN++; S.care++;
+      setMeter("joy",S.joy+22);
+      setMeter("spark",S.spark-4);
+      mood("joy");
+      el.arenaWonTxt.textContent="Aw yeah! Five stars!";
+      el.arenaWon.classList.add("on");
+      say("Aw yeah!");
+      afterCare();
+    }else{
+      setMeter("joy",S.joy+6);
+      mood("idle");
+      el.arenaWonTxt.textContent="He'll get 'em next time.";
+      el.arenaWon.classList.add("on");
+      say("He'll get 'em next time.");
+    }
+    setTimeout(() => {
+      el.arenaWon.classList.remove("on");
+      el.arena.classList.remove("on");
+      setActsDim(false);
+      mood("idle");
+    },1300);
+  }
+
+  // ---- REST ----
+  const doRest = () => {
+    if(!S.hatched||S.ended||S.busy||S.sleeping||S.arenaOpen) return;
+    if(S.spark>=99){ say("Wide awake! Play with him instead."); return; }
+    S.sleeping=true; S.sleepStart=Date.now(); S.sleepCredited=false;
+    mood("sleep");
+    el.dragon.classList.add("sleeping");
+    el.sleep.classList.add("on");
+    setActsDim(true);
+    spawnZ();
+    say("Zzz…");
+  }
+
+  const spawnZ = () => {
+    if(!S.sleeping) return;
+    var z=document.createElement("div"); z.className="zzz"; z.textContent="💤";
+    z.style.left="60%"; z.style.top="34%";
+    el.stage().appendChild(z);
+    setTimeout(() => { z.remove(); },1000);
+    setTimeout(spawnZ,1400);
+  }
+
+  const wakeRest = () => {
+    if(!S.sleeping) return;
+    var dur=(Date.now()-S.sleepStart)/1000;
+    S.sleeping=false;
+    el.dragon.classList.remove("sleeping");
+    el.sleep.classList.remove("on");
+    setActsDim(false);
+    if(dur>=2&&!S.sleepCredited){ S.restN++; S.care++; S.sleepCredited=true; afterCare(); }
+    mood("idle");
+    if(S.spark>=99){ say("Rested up. Let's go!"); }
+  }
+
+  // ---- shared ----
+  const lock = (ms) => {
+    S.busy=true;
+    setTimeout(() => { S.busy=false; },ms);
+  }
+
+  const setActsDim = (dim) => {
+    for(var k in el.acts){ el.acts[k].classList.toggle("dim",dim); }
+  }
+
+  const afterCare = () => {
+    if(S.care===6&&!S.grewOnce){
+      S.grewOnce=true;
+      setTimeout(() => {
+        el.wrap.classList.add("glowV","big");
+        mood("joy");
+        say("The V is glowing!");
+        setTimeout(() => { el.wrap.classList.remove("glowV"); mood("idle"); },2600);
+        setTimeout(() => { burst(120,150,"✨"); burst(170,110,"💛"); burst(60,120,"✨"); },600);
+      },900);
+    }
+    if(S.care>=12&&!S.ended){
+      S.ended=true;
+      setTimeout(endGame,2000);
+    }
+  }
+
+  const endGame = () => {
+    mood("sleep");
+    $("st-feed").textContent=S.feedN;
+    $("st-play").textContent=S.playN;
+    $("st-rest").textContent=S.restN;
+    el.end.classList.add("on");
+  }
+
+  const resetGame = () => {
+    S.hatched=false; S.ended=false; S.busy=false; S.sleeping=false;
+    S.tummy=70; S.spark=70; S.joy=60; S.care=0; S.feedN=0; S.playN=0; S.restN=0;
+    S.grewOnce=false; S.arenaOpen=false;
+    el.end.classList.remove("on");
+    el.sleep.classList.remove("on");
+    el.arena.classList.remove("on");
+    el.wrap.classList.remove("show","big","glowV");
+    $("stage").classList.remove("hatched");
+    el.dragon.classList.remove("sleeping","lungeL","lungeR","chew","cheer");
+    el.eggWrap.style.display="";
+    el.eggWrap.classList.remove("hatch");
+    mood("idle");
+    setActsDim(false);
+    updateMeters();
+    say("Tap the egg!");
+  }
+
+  // ---- master tick: decay + regen + mood ----
+  setInterval(() => {
+    if(!S.hatched||S.ended) return;
+    S.tick++;
+    if(S.sleeping){
+      if(S.spark<100){ setMeter("spark",S.spark+4); }
+      if(S.spark>=100){ wakeRest(); }
+      return;
+    }
+    if(S.arenaOpen||S.busy) return;
+    if(S.tick%7===0){
+      var keys=["tummy","spark","joy"];
+      var k=keys[Math.floor(Math.random()*3)];
+      if(S[k]>0) setMeter(k,S[k]-3);
+    }
+    var need=lowNeeds();
+    if(need&&S.tick-S.lastLowMsg>15){
+      S.lastLowMsg=S.tick;
+      mood("sad");
+      var words={tummy:["Grr… hungry…","Belly says feed me."],spark:["So sleepy…","Need a nap."],joy:["Bored…","Play with me?"]};
+      say(rand(words[need]));
+      var mk={tummy:el.acts.feed,spark:el.acts.rest,joy:el.acts.play}[need];
+      mk.classList.add("hot");
+      setTimeout(() => { mk.classList.remove("hot"); },2600);
+      setTimeout(() => { mood("idle"); },2400);
+    }
+  },1000);
+
+  // wake from rest on any tap on stage
+  $("stage").addEventListener("pointerdown",() => { if(S.sleeping) wakeRest(); });
+  document.addEventListener("visibilitychange",() => {
+    if(document.hidden){ S.tick=0; }
+  });
+
+  initEl(); updateMeters(); mood("idle");
+
+  // debug screenshot states: index.html?debug=1&s=main (hatched, idle)
+  var qs=new URLSearchParams(location.search);
+  if(qs.get("debug")==="1"&&qs.get("s")==="main"){
+    S.hatched=true;
+    el.eggWrap.style.display="none";
+    el.wrap.classList.add("show");
+    $("stage").classList.add("hatched");
+    mood("idle");
+    el.dragon.classList.add("no-bob");
+    updateMeters();
+  }
+})();
+</script>
+</body>
+</html>
