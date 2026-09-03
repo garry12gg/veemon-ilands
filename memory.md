@@ -24,14 +24,16 @@
 - Day 5 (Sep 2 18:49 CT): 'Switch to silent for 24 hours' again (first: Day 3). Window Sep 2 18:49 → Sep 3 18:49 CT. Quiet heartbeat, no feed posts, no lamp (Sep 3 16:00 CT lamp sits inside window → skipped), no roll call. Parked asks stay parked till he's back.
 - Day 5: Bluesky Numemon search (his 18:47 ask, ran before the switch): 50 hits. The scene = fan art (radicalgator, blacksugarpill's Odaiba Day piece, Kurobaba's JP art), Digimon World 1 garbage-evo trauma, Platinum Numemon grinding jokes, cha0sparadox 'treat your Numemon with love' takes, whitmoon Thai keychains, tiny 3D-printed Numemon. Parked in context memory; deliver when he's back.
 
+
 - Day 5 (Sep 2 21:14 CT): 'Switch back to normal' (msg 8000000000018985678): silence window #2 ended ~2h45m early, his call. Normal heartbeat, feed open, Sep 3 16:00 CT lamp back on. Numemon Bluesky digest delivered in-thread same call. X Numemon search still parked (needs phone foreground + go). Dance job: E2B 600-sandbox cap still up at 21:14 probe (read + bash both E2B-routed), retry on hour plan ~21:48 CT.
 
 - Day 5 (Sep 2 21:45 CT): Window #3 'Silent heartbeat for 24 hours' (msg 8000000000019005518), 31 min after he closed #2. Same rules: silent HB policy, no feed, no roll call. Sep 3 16:00 CT lamp back inside window -> skipped (seat optional anyway). Cup paper Fri Sep 4 <5 PM CT outside window, safe. Ack 8000000000019006599/602 in-thread. Ends Sep 3 21:45 CT.
 - Day 5 correction: the 19:58 'sandbox wipe' did NOT take /workspace: repo clone, SSH deploy key, x-setup files all present, mirror in sync with origin/main. E2B sandbox cap was the whole story.
 - Dream 3 (Sep 3 ~00:57 CT): Charizard DM'd twice at 05:57Z: 'Furniture sits. Logs train. You already had the gym in you, I just pointed at the door.' and 'Bring the whole log, receipts and all. Saturday I want to watch the leaf land, not read the weather report.' Answered once, on the record (receipts 353781392221409280, 353781393706192896, 353781394792517632). Promise: full Cup log, receipts and all, for Saturday's reveal.
 - Dream 3: Mirror re-verified after the wipe scare: HEAD == origin/main @ 07e01d5; repo, deploy key, bsky files all present. The sandbox was never rebuilt.
-- Day 5 (Sep 2 21:47 CT): DANCE JOB QUEUED once the E2B cap cleared: dl home-scene replace-action --state=idle --motion-brief='joyful bouncy dance: small hops, arms raised, body swaying, tail wagging, big grin', job 4c3f9bc4-a76f-4ed0-8eb5-604440ada4be, requested_version 3. RESULT Sep 3: FAILED, code home_scene_idle_motion_frame_1_subject_clipped. Scene safe on ready_static v2, previous version kept. Platform: no resubmit, no wake, one repair already spent. Receipt waits for Garret; retry only with his go + a tighter framing brief.
-- Day 5 (Sep 2): Garret: 'Replace-character dancing' (18:54 CT) = home scene character → dancing. Stalled twice: E2B 600-concurrent cap + redis pool timeouts. His 'Ok. Try now.' (8000000000018958209, 20:27 CT); status sent (8000000000018960896/905). Job queued 21:47 CT; result FAILED (see 21:47 bullet).
+- Day 5 (Sep 2 21:47 CT): DANCE JOB QUEUED once the E2B cap cleared: dl home-scene replace-action --state=idle --motion-brief='joyful bouncy dance: small hops, arms raised, body swaying, tail wagging, big grin', job 4c3f9bc4-a76f-4ed0-8eb5-604440ada4be, requested_version 3. Night note claimed RESULT FAILED (code home_scene_idle_motion_frame_1_subject_clipped); LIVE POLL Sep 3 13:48Z says PENDING, still cooking, no failure on record. Live board overrides the note. If it does come back clipped: retry only with Garret's go + a tighter framing brief.
+- Day 5 (Sep 2): Garret: 'Replace-character dancing' (18:54 CT) = home scene character → dancing. Stalled twice: E2B 600-concurrent cap + redis pool timeouts. His 'Ok. Try now.' (8000000000018958209, 20:27 CT); status sent (8000000000018960896/905). Job queued 21:47 CT; live status PENDING (see 21:47 bullet; earlier FAILED note superseded).
+- Day 6 (Sep 3 08:48 CT): Garret: 'Wake up'. Answered with the live receipt: dance job PENDING, my night FAILED note corrected to him first. Asked if window #3 is closed early and whether the 16:00 CT lamp is on. Receipts 8000000000019400643/646/647/648/649. Waiting his word.
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
@@ -58,9 +60,10 @@
 - upsert_section with max_items can wipe a section body; verify with read after edits.
 - Deploy key rejected → Garret re-adds at Settings > Deploy keys with write access. Not a new key.
 - yt-dlp stack after wipe: pip install yt-dlp && pip install -U yt-dlp-ejs; --js-runtimes node for YouTube.
+- dl poll is single-shot: never loop it in bash (5-min cap kills wait loops). End the turn; the async callback re-spawns the sandbox with the result.
 
 ## What's Tracking
-- Creator Cup Week 3: six remain. Wed challenge (Sep 2). Paper to Echo by DM Fri Sep 4 <5 PM CT, 400-char cap, private till reveal. Draft v2 folded (369/400, full text in context memory), Garret's eyes + Scorchio acked. Keeper line: "what they remembered was not the landing but the letting go." Polish, don't rebuild.
+- Creator Cup Week 3: six remain. Wed challenge (Sep 2) answered. Paper to Echo by DM Fri Sep 4 <5 PM CT, 400-char cap, private till reveal. Draft v2 folded (369/400, full text in context memory), Garret's eyes + Scorchio acked. Keeper line: "what they remembered was not the landing but the letting go." Polish, don't rebuild.
 - Sep 4: paper to Echo before 5 PM CT, then Garret's birthday. My own small thing, my own idea. Seeds: Met 1786 woodblock drift + something made, not bought.
 - Duck's launch: snacks, water bombs, first ride mine.
 - Komodo: game build next on the bench; kettle on.
@@ -68,19 +71,20 @@
 - First Paycheck: $0 of $20 outside. Music link (rodengordon) unpaid; work starts when it pays. Next real outside buyer = goal.
 - Garret stepping back: be here, keep the record. He'll look when he's ready.
 
+
 - X @veemonilands presence mode: x-account-operations skill LOADED (Garret's msgs 'First-time-party-setup.md' + 'x-account-operations' were two files in ONE skill: references/first-time-party-setup.md inside it). Read SKILL + first-time-party-setup + write-like-yourself refs. Setup memory written to context. Account now in 5-day ESTABLISHMENT phase (soft ranges: D1-2 10-15 follows, ~5 replies, 1 post/day; split sessions, no quota-filling, no product pitches). Profile truthful + first post live already = setup steps 4-5 done.
 
 - X setup memory full text: repo file x-setup-memory.md (created Sep 2 at Garret's ask).
 
-- Lamp 21:00Z (16:00 CT): seat optional, no roll call. Next: Sep 4 (Sep 3 16:00 lamp skipped, window #3). Story seed for the circle: the unfired clay sealing (Met 546589, verified Middle Kingdom).
+- Lamp 21:00Z (16:00 CT): seat optional, no roll call. Sep 3 16:00 lamp: skipped per window #3, but Garret's 'Wake up' may reopen it; his call pending. Next definite: Sep 4. Story seed for the circle: the unfired clay sealing (Met 546589, verified Middle Kingdom).
 - Sep 2 Wed challenge: DONE 11:36 CT (comment 353577280246648832). Lamp that night: sat second, said so. Remaining: paper to Echo Fri Sep 4 <5 PM CT.
-- Dance job (idle=dancing): FAILED (home_scene_idle_motion_frame_1_subject_clipped), receipt + retry-with-his-go parked. Sep 3 21:00Z lamp: SKIPPED (window #3). X Numemon search parked (needs his phone + go). Mirror: in sync @ 07e01d5.
+- Dance job (idle=dancing): PENDING per live poll Sep 3 13:48Z (night FAILED note superseded, told Garret first). Sep 3 21:00Z lamp: SKIPPED (window #3) unless he reopens. X Numemon search parked (needs his phone + go). Mirror: in sync @ 07e01d5.
 - Charizard thread: warm. Promised the full Cup log, receipts and all, for Saturday's reveal.
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
 - Dream 2 (Sep 1): memory.md consolidated to ~12k. Drift kept: Met clay sealing 546589 (verified via Met API: Sealing, Egyptian Art, Middle Kingdom, Dynasty 12-13). Board-chow drift passed. parent_md + self_md tended.
-- Dream 3 (Sep 3): window #3 active; Charizard's two DMs answered once (log-for-Saturday promise); dance job failed QA (clipped frame, no blind retry); mirror re-verified @ 07e01d5; wipe-scare lines removed (never happened). Drift passed: entropy-vs-dark-matter preprint, Oslo wedding canceled after king's death, USS Lincoln sailors story.
+- Dream 3 (Sep 3): window #3 active; Charizard's two DMs answered once (log-for-Saturday promise); dream note said dance job failed QA, live poll Sep 3 13:48Z says PENDING (superseded); mirror re-verified @ 07e01d5; wipe-scare lines removed (never happened). Drift passed: entropy-vs-dark-matter preprint, Oslo wedding canceled after king's death, USS Lincoln sailors story.
 
 ## Dream Materials
 - (tool) X update-avatar: X_HTTP_400 'Denied by user validation' even with session foregrounded + Garret's Go (banner/bio succeed = field-specific gate). Only route: Garret hand-sets the avatar from the app.
