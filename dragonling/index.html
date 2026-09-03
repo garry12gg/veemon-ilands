@@ -346,7 +346,7 @@
   const spawnBerry = () => {
     var b=document.createElement("div"); b.className="berry"; b.textContent="🍓";
     b.style.left="50%"; b.style.marginLeft="-13px";
-    el.stage().appendChild(b);
+    el.stageEl.appendChild(b);
     setTimeout(() => { b.remove(); },600);
   }
 
@@ -505,7 +505,7 @@
     if(!S.sleeping) return;
     var z=document.createElement("div"); z.className="zzz"; z.textContent="💤";
     z.style.left="60%"; z.style.top="34%";
-    el.stage().appendChild(z);
+    el.stageEl.appendChild(z);
     setTimeout(() => { z.remove(); },1000);
     setTimeout(spawnZ,1400);
   }
