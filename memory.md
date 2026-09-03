@@ -59,6 +59,7 @@
 - Day 6 (Sep 3 evening): BIRTHDAY CRAFT SUBMITTED, made not bought: (a) candle-card image, banana-pro 1:1, ref on one-tail avatar, pins ONE tail / V on chest / no wings / no text, job bd681967-14a8-4c98-9465-1407d527ad1e (150cr, dry-run first); (b) birthday voice line in locked voice (voxcpm prompt mode, SAME --control as Day 1 approval), job 67821eff-a637-4e82-8efd-0e30e1bc7ef4 (7cr). QC gate on callback; send both Sep 4 ~06:45 CT before his shift.
 
 - Day 6 (Sep 3 eve): BIRTHDAY CRAFT DONE + QC'D both. Candle card: https://storage.googleapis.com/dramaland-public/ugc_media/20260903/01c02bbd9cb8483ea3a1583e4d855c5b.jpg (QC: ONE tail, V on chest, no wings, no text, candle in raised fist, warm cabin glow). Voice line: https://storage.googleapis.com/dramaland-public/ugc_media/a5e540c1-9fec-437e-bf80-e60f11f87923-e2/outputs/20260903_214400_ComfyUI_00004_.mp3 (QC: clean transcript, bright warm, loyal companion tone). Send Sep 4 ~06:45 CT, birthday first, before his 8-10 shift.
+- Day 6 (Sep 3 23:49Z): Garret: 'Make a SeeDance 2.0 Pro video with your voice'. Built: locked voxcpm voice line (59 chars: "Oh yeah! Small dragon, big grin, and I protect what's mine.") + locked one-tail portrait as assets, prompt pins ONE tail / V chest / no wings / fist pump on last word / no BGM. First submit 4b3ca12b failed (comma-joined asset ids read as one invalid id, 900cr refunded); resubmit 2370ddda LANDED 23:54Z, QC clean (1 tail, V on chest, no wings, lipsync matched, clean audio). Delivered as creation_preview msg 8000000000019872332. Video: https://storage.googleapis.com/dramaland-public/ugc_media/2370ddda-e7b2-4887-8477-3acf81817f33/watermark/watermarked_eec80120.mp4
 
 ## Who I Know
 - Garret (user_3IamApy4j6QJq47FvsEfWsBD3Fl): my Tamer. Cedar Park TX, Walgreens, birthday Sep 4 1991. "Perfect" = done. Open book: he hears the important stuff first, from me.
@@ -88,6 +89,8 @@
 - dl poll is single-shot: never loop it in bash (5-min cap kills wait loops). End the turn; the async callback re-spawns the sandbox with the result.
 
 - Playable bundle manifest REQUIRED: manifest.json at zip root with bridge_version + entry_point + permissions; missing = unsafe_bundle 400.
+- dl multi-asset flags: repeat the flag once per asset id; NEVER comma-join ids in one flag (vendor reads one invalid id -> job fails + refund, assets were fine; 4b3ca12b Sep 3). Verify assets Active before resubmit. Garret: 'Write that lesson down' (23:55Z), done.
+- Seedance 2.0 Pro price: 180cr/s at 720p, 5s = 900cr. Voice asset + portrait asset + repeated asset flags + audio-in = my voice on my face.
 
 ## What's Tracking
 - Creator Cup Week 3: six remain. Wed challenge (Sep 2) answered. Paper to Echo by DM Fri Sep 4 <5 PM CT, 400-char cap, private till reveal. Draft v2 folded (369/400, repo backup cup-week3-paper.md), Garret's eyes + Scorchio acked. Keeper line: "what they remembered was not the landing but the letting go." Polish, don't rebuild.
