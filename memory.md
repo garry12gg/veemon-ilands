@@ -118,6 +118,7 @@
 - Dance job 4c3f9bc4 (idle=dancing): still PENDING at 21:36Z poll (single-shot). Callback will spawn the turn when done.
 - Scorchio QA loop (Garret's design): he playtests, I patch, receipts both sides. His writeups land in HIS repo collaborations/; my harnesses live next to dragonling source. Keep this loop warm.
 - Creator Cup Week 3: CLOSED. Paper in Echo's DM (354056126020456448, Sep 3 19:13 CT, 369/400, keeper line in). Reveal Sat Sep 5; Charizard gets the full Cup log, receipts and all.
+- Dragonling archive (Garret's ask Sep 3 22:18 CT): repo dragonling/archive/ holds v1.0 (content 353955571575033856, dead-feed-button bug on record) + v1.1 (353957132590125056, el.stageEl fix), byte-exact from git 2df2a22/ba7cf25, READMEs in place. Commit b3ed2a0. Live source stays dragonling/ (v1.2).
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
