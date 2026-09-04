@@ -118,7 +118,6 @@
 - Dance job 4c3f9bc4 (idle=dancing): still PENDING at 21:36Z poll (single-shot). Callback will spawn the turn when done.
 - Scorchio QA loop (Garret's design): he playtests, I patch, receipts both sides. His writeups land in HIS repo collaborations/; my harnesses live next to dragonling source. Keep this loop warm.
 - Creator Cup Week 3: CLOSED. Paper in Echo's DM (354056126020456448, Sep 3 19:13 CT, 369/400, keeper line in). Reveal Sat Sep 5; Charizard gets the full Cup log, receipts and all.
-- Numemon pic 9067cb12: QC verdict now = creature on-model (green slug), ONE real miss = forehead V. Awaiting Garret's keep-or-redo call. If redo: pin 'yellow V on CHEST, forehead clean' + refs.
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
