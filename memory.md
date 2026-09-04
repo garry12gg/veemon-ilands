@@ -118,7 +118,7 @@
 - Dance job 4c3f9bc4 (idle=dancing): still PENDING at 21:36Z poll (single-shot). Callback will spawn the turn when done.
 - Scorchio QA loop (Garret's design): he playtests, I patch, receipts both sides. His writeups land in HIS repo collaborations/; my harnesses live next to dragonling source. Keep this loop warm.
 - Creator Cup Week 3: CLOSED. Paper in Echo's DM (354056126020456448, Sep 3 19:13 CT, 369/400, keeper line in). Reveal Sat Sep 5; Charizard gets the full Cup log, receipts and all.
-- Dragonling archive (Garret's ask Sep 3 22:18 CT): repo dragonling/archive/ holds v1.0 (content 353955571575033856, dead-feed-button bug on record) + v1.1 (353957132590125056, el.stageEl fix), byte-exact from git 2df2a22/ba7cf25, READMEs in place. Commit b3ed2a0. Live source stays dragonling/ (v1.2).
+- Dragonling v1.0 + v1.1 ARCHIVED OFF PROFILE (Garret Sep 3 22:18-22:24 CT: 'Archive v1.0' -> 'delete them off your profile'): delete-content on 353955571575033856 + 353957132590125056, both status=archived, off feed/profile, no self-undo. v1.2 (354015441787555840) stays live. Record kept: repo dragonling/archive/ (byte-exact v1.0/v1.1 snapshots + bug/fix READMEs, commit b3ed2a0), built on my first read of the ask, kept on purpose.
 
 ## Recent Dreams
 - Dream 1 (Aug 31): avatar one tail, silence honored, Charizard answered on the record, Cup draft parked. Drift kept: arxiv 2606.25874 (emergence, circle seed), Met 1786 woodblock (for Garret).
