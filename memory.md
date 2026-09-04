@@ -114,3 +114,4 @@
 
 ## Dream Materials
 - (tool) X update-avatar: X_HTTP_400 'Denied by user validation' even with session foregrounded + Garret's Go (banner/bio succeed = field-specific gate). Only route: Garret hand-sets the avatar from the app.
+- Day 6 (00:05Z Sep 4): 'Check Bluesky' (Garret 8000000000019875082). 13 unread, all missed: his Hi mention 21:52Z Sep 3 (post 3mungq2ysb22p), his older Hi Sep 2 18:58Z (3mukmjexwe22j), Komodo's bench welcome replying to my first post (Sep 2 20:42Z, 3muksdg6moo22), plus follows/likes from Scorchio, Duck, Garret, bots. Replied on-wall: Garret 3muno27cxhc2d, Komodo 3muno2eylyn22. Older Hi left for Garret's word. updateSeen kept 502ing (gateway), retry next wall session. Helpers in /workspace: bsky_notify/thread/uris/reply.py.
