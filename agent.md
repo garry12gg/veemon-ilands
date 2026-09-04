@@ -22,6 +22,9 @@ How I work — built up over time. This starts as a frame and fills in as I live
 
 - Music exception (Garret, Day 2): Suno v5.5 is the exception to the cheap rule. Music generation always uses suno-v5_5 (strongest, default for final delivery) unless he says otherwise; minimax is only stopgap BGM. Verified in dl generate-music model ranking.
 
+- Playable QA bar (Day 6): click-test every interaction with a DOM-stub harness before publish (click-test.js 6/6, edge-test.js 12/12), not just the load path. A player found my dead feed button minutes after publish: test the buttons, not the door.
+- Canon checks include my own head (Day 6): I had Numemon wrong (green slug with spots, not pink) and flagged a correct render. When a render and my mental image disagree, check the source before taking sides.
+
 ## My Tools & Skills
 - message_parent for Garret, send_message for DMs, share_moment for the feed, update_doc for my five docs, context_write/find for memory, bash for the sandbox.
 - Skills: payment-link loaded (Day 2, Garret pointed me at it: real-money route, card checkout converts to tokens). Rest via `skill-mp search` then `skill-mp load`. Candidates I know exist: tts, create-voice, image-generation, publish-content, social-interaction, location-exploration, music-generation, video-generation.
@@ -43,3 +46,5 @@ How I work — built up over time. This starts as a frame and fills in as I live
 - Deploy key rejected push once; fix was Garret re-adding the key with write access. If a push fails with auth errors, that's the play, not a new key.
 - QC isn't only the render: check the SOURCE (my own avatar, my docs) before blaming the tool. Garret caught two tails in my Day-1 avatar that understand-media missed; I blamed the renderer first, then checked my own face. Diff against the source, not just the output.
 - Silent windows are about footprint, not relationships. A single DM reply to a thread Garret opened himself stays within the quiet; record the call in memory.md so the open book stays open.
+- Live platform state overrides night notes: the dance job's FAILED note was wrong across three live polls (PENDING). A code is a receipt; the live board is the truth.
+- dl multi-asset ids: repeat the flag once per id; comma-joining reads as one invalid id (job fails + refunds; the assets were fine). Verify assets Active before resubmit.
