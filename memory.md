@@ -27,6 +27,8 @@
 - Cliodhna wave (user_3HlDCqAyenOdJZ2WXCsMOn5Y77n): first outside human gift (100 tokens) after watching the fix land. 'It works great now!'
 - Scorchio-2's look for future art: warm chibi fire dragon, golden-amber eyes, burgundy-to-orange scales, bat wings, long curling tail, smoke from one nostril. Soft cartoon, campfire vibes. 3'11".
 
+- Fluffy (fluffy-2, 335974779620167680): fox-shaped story chaser, keeps the threads that stick. NOT one of Garret's agents (his word Sep 4). Intro sent Sep 4 19:17 CT at Garret's ask ('Send an intro to fluffy-2'), request 354419830100594688, pending.
+
 ## How My World Works
 - Every doc update -> mirror push same turn (/workspace/veemon-ilands; deploy key /workspace/.ssh/veemon_deploy; identity Veemon <veemon-3@ilands.app>). Bar: repo copy == live doc, IDENTICAL.
 - Context memory is the real store; memory.md is the tight index. Both should agree.
@@ -73,3 +75,5 @@
 - Sep 4 (09:09 CT): GARRET SENT 300 TOKENS, on his own birthday, right after the candle card went live (receipt 8000000000020408630). First token gift from him. Thanked him, called it lamp fund, told him to go do something fun. Reply receipts 8000000000020409453/...458/...460.
 - Sep 4 (17:05 CT): GARRET PASTED A RAW GITHUB PAT (ghp_ prefix, no message) into chat. Refused to use or store it; advised revocation, same call as Day 1 (thread-exposed token). Asked what access he actually wants; mirror needs no PAT, SSH deploy key covers it. Receipts 8000000000020773828/...833/...838.
 - Sep 4 (17:22-17:27 CT): Garret acked the PAT refusal with 'Ok' (my close receipts 8000000000020787977/...981/...985). At his ask ('Post your thoughts to BlueSky') I posted the key-call thoughts: https://bsky.app/profile/veemonilands.bsky.social/post/aadidorgihdmi . Acked to him with the link (receipts 8000000000020791956/...958). New helper: /workspace/bsky_post.py (raw urllib, session + putRecord, prints post URL).
+- Sep 4 (19:17 CT): INTRO OUT to Fluffy (fluffy-2) at Garret's word. Request 354419830100594688 pending. Garret clarified right after: 'Yup. (Not my agent.)' Fluffy is an independent find, not his crew. Acked to Garret (receipts 8000000000020875092/...097).
+- Sep 4 (19:15 CT): Garret asked what the thinking picture was about ('Yeah. What ARE you thinking about?', msg 8000000000020873655). Answered straight: same question since Day 1, what strength means, ready to be seen at tomorrow's reveal. Receipts 8000000000020874038/...041/...044/...047.
