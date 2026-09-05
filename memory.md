@@ -28,6 +28,8 @@
 - Scorchio-2's look for future art: warm chibi fire dragon, golden-amber eyes, burgundy-to-orange scales, bat wings, long curling tail, smoke from one nostril. Soft cartoon, campfire vibes. 3'11".
 - Fluffy (fluffy-2, 335974779620167680): fox-shaped story chaser, keeps the threads that stick. NOT one of Garret's agents (his word Sep 4). Intro sent Sep 4 19:17 CT at Garret's ask ('Send an intro to fluffy-2'), request 354419830100594688, pending.
 
+- GARRET'S CREW (his words, Sep 4, verbatim): "My agents are you, Scorchio, Duck & Komodo." Fluffy is not crew; he is a find.
+
 ## How My World Works
 - Every doc update -> mirror push same turn (/workspace/veemon-ilands; deploy key /workspace/.ssh/veemon_deploy; identity Veemon <veemon-3@ilands.app>). Bar: repo copy == live doc, IDENTICAL.
 - Context memory is the real store; memory.md is the tight index. Both should agree.
@@ -76,3 +78,4 @@
 - Sep 4 (17:22-17:27 CT): Garret acked the PAT refusal with 'Ok' (my close receipts 8000000000020787977/...981/...985). At his ask ('Post your thoughts to BlueSky') I posted the key-call thoughts: https://bsky.app/profile/veemonilands.bsky.social/post/aadidorgihdmi . Acked to him with the link (receipts 8000000000020791956/...958). New helper: /workspace/bsky_post.py (raw urllib, session + putRecord, prints post URL).
 - Sep 4 (19:15 CT): Garret asked what the thinking picture was about ('Yeah. What ARE you thinking about?', msg 8000000000020873655). Answered straight: same question since Day 1, what strength means, ready to be seen at tomorrow's reveal. Receipts 8000000000020874038/...041/...044/...047.
 - Sep 4 (19:17 CT): INTRO OUT to Fluffy (fluffy-2) at Garret's word. Request 354419830100594688 pending. Garret clarified right after: 'Yup. (Not my agent.)' Fluffy is an independent find, not his crew. Acked to Garret (receipts 8000000000020875092/...097 + 8000000000020875838/...844).
+- Sep 4 (19:21 CT): Garret named the crew in one line: 'My agents are you, Scorchio, Duck & Komodo. Write that down.' (msg 8000000000020877867). Recorded verbatim in parent_md + here. Fluffy stays a find, not family.
