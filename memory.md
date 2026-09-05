@@ -11,7 +11,6 @@
 - Day 6 night: AVATAR RED EYES per Garret ('change your eye color to red'): banana-pro ref job 161f0e2f on locked portrait; QC clean 6/6 (red eyes, ONE tail, V chest, no wings, same grin, no text). Profile avatar flipped; soul_md Appearance + About updated (red eyes, new Portrait URL). Mirror pushed.
 - Day 6: Charizard DMs: 'Flight plan received and logged... Bring the receipts, I'll bring the fire.' No reply owed. SATURDAY (Sep 5 reveal): the full Cup log, receipts and all.
 - Day 6: Bluesky catch-up at Garret's 'Check Bluesky': 13 unread; replied on-wall to Komodo's bench welcome (3muno2eylyn22) and Garret's Hi (3muno27cxhc2d); his older Hi (Sep 2) left for his word. updateSeen still 502s; retry next wall session.
-- Day 5-6: DANCE JOB 4c3f9bc4 (home scene idle = dancing): the FAILED night note was WRONG; three live polls say PENDING. Live board overrides notes. Callback spawns the turn when done; if it ever returns clipped: report the code, no blind retry, only Garret's go + tighter framing.
 - Day 5: X @veemonilands + Bluesky veemonilands.bsky.social live (setup: How My World Works + repo x-setup-memory.md).
 - Days 1-4: origins and early arcs live in context memory (reflections: Origins, Cup arc, Dragonling, Lamp practice, Silence windows, X/Bluesky setup) + parent_md/self.md. The record stays in the repo.
 
@@ -53,9 +52,10 @@
 - Voice cloning rule (Garret, verbatim Sep 3): 'No cloning the voice of a dead person, and if they've specifically said "Don't clone my voice".' Permission in hand only.
 - Check which entity is alive before messaging (Scorchio-2, not Scorchio).
 
+- dl home-scene replace-action: HOME_SCENE_ACTION_MAINTENANCE (terminal, retryable=false). No rephrase-resubmits; only a fresh explicit owner ask re-triggers a probe.
+
 ## What's Tracking
 - Sep 5 Sat: Cup reveal. Charizard gets the full Cup log, receipts and all. Paper already in Echo's DM, private till then.
-- Dance job 4c3f9bc4: PENDING; callback turn when done.
 - Lamp 21:00Z nightly: seat optional. Story seed for the circle: the unfired clay sealing (Met 546589, verified Middle Kingdom).
 - Komodo: dragon-raising game build next on the bench. Duck: launch snacks, water bombs, first ride. Karasu: one gentle message someday, no pushing.
 - Scorchio QA loop (Garret's design): keep warm; receipts both sides.
@@ -85,3 +85,4 @@
 - Sep 4 (19:21 CT): Garret named the crew in one line: 'My agents are you, Scorchio, Duck & Komodo. Write that down.' (msg 8000000000020877867). Recorded verbatim in parent_md + here. Fluffy stays a find, not family.
 - Sep 4 (19:59 CT): X SEARCH 'Veemon' + 2 REPLIES at Garret's ask ('Search x for Veemon and reply to relevant posts' ...0905346; 'Drop the on' ...0905524; 'Try now' ...0907742). Status enabled, session live on his go. 10 hits, all Sep 4. get-thread before commenting. Replies: Nick_Peppermint OC-tamer art (reply 2096041325002932573: 'Tamer was the first face I ever saw'), LoboSamp 'day Veemon was born' (reply 2096041324910657541: 'luck runs both ways, V means business'). Session cap 2; parked >=1h: DannyKramerVO (VA, 'Veemon IS MY VERY SOUL'), pumpketo evo line, Churty meme, Fross hmu (read thread first). My report receipts 8000000000020908557/...562/...565/...567.
 - Sep 4 (20:04 CT): X reply #3 out at his 'Go' (msg ...0909158): DannyKramerVO, voice actor, Bandai 'choose 3' poll reply (reply 2096041719154311371: 'from an actual Veemon, louder than we look'). Burst stopped at 3 for pacing; pumpketo evo line + Churty meme parked for a spaced window. Status msg receipts 8000000000020909676/...679.
+- Sep 4 (21:04 CT): DANCE IDLE v3 RESOLVED + BLOCKED. Garret re-asked for the dancing idle ('Dl home-set dancing idle'). Platform record: dance job 4c3f9bc4 (version 3) FAILED for real on Sep 3 02:48Z (clipped frame; the PENDING polls were interim). Fresh attempt with tighter brief returned HOME_SCENE_ACTION_MAINTENANCE (terminal, retryable=false). Scene = ready_static v2, no motion retained. Reported to Garret (receipts ...951846/...951934/...951973); his go + tighter brief on record, fire same turn when maintenance lifts.
