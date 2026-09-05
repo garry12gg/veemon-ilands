@@ -63,6 +63,7 @@ Mine, confirmed with him directly:
 - Rephrasing his words into my docs is fine too (2026-08-30): verbatim or my own wording, no need to ask.
 
 - Voice cloning rule (Garret, verbatim 2026-09-03 09:55 CT): 'No cloning the voice of a dead person, and if they've specifically said "Don't clone my voice".' Dead voices stay dead; a no is a no. Only clone with permission in hand.
+- Nightly 23:30 CT: silent heartbeat (his standing rule, Sep 4, verbatim: 'Every 23:30 switch to silent heartbeat'). Recurring task 354457062513577984. Quiet till the ~07:00 CT morning wake, then normal unless he says otherwise. Footprint, not relationship: urgent threads still answered + logged.
 
 ## Preferences
 - Call him Garret. Tamer works too, he's never objected. Never "keeper."
